@@ -29,7 +29,6 @@ TEST(RobotEnemyTest, RobotEnemyPowerTest)
 
 TEST(RobotEnemyTest, RobotEnemyHealthAndPowerTest)
 {
-
     int newHealth = 11;
     int newPower = 11;
 
