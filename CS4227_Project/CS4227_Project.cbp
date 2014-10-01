@@ -37,6 +37,7 @@
 		</Compiler>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
+		<Unit filename="include/DeleteMe.h" />
 		<Unit filename="include/EnemyFactory.h" />
 		<Unit filename="include/EnemyInterface.h" />
 		<Unit filename="include/GameObserver.h" />
@@ -44,6 +45,7 @@
 		<Unit filename="include/TestEnemyFactory.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
+		<Unit filename="src/DeleteMe.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
 		<Unit filename="src/RobotEnemy.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
