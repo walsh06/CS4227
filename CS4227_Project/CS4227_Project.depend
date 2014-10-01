@@ -23,3 +23,24 @@
 	<EnemyFactory.h>
 	<gtest/gtest.h>
 
+1412183658 source:/home/liam/cs4227/CS4227/CS4227_Project/src/EnemyFactory.cpp
+	"EnemyFactory.h"
+
+1412183658 /home/liam/cs4227/CS4227/CS4227_Project/include/EnemyFactory.h
+	<RobotEnemy.h>
+
+1412183658 /home/liam/cs4227/CS4227/CS4227_Project/include/RobotEnemy.h
+	<EnemyInterface.h>
+
+1412183658 /home/liam/cs4227/CS4227/CS4227_Project/include/EnemyInterface.h
+
+1412183658 source:/home/liam/cs4227/CS4227/CS4227_Project/src/RobotEnemy.cpp
+	"RobotEnemy.h"
+
+1412183658 source:/home/liam/cs4227/CS4227/CS4227_Project/src/TestEnemyFactory.cpp
+	"TestEnemyFactory.h"
+
+1412183658 /home/liam/cs4227/CS4227/CS4227_Project/include/TestEnemyFactory.h
+	<EnemyFactory.h>
+	<gtest/gtest.h>
+
