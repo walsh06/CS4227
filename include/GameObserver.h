@@ -6,8 +6,6 @@ class GameObserver
 {
     public:
         virtual void update() = 0;
-    protected:
-    private:
 };
 
 #endif // GAMEOBSERVER_H
