@@ -31,8 +31,7 @@ bool Achievement::updateProgress(int type, int newValue)
 
  void Achievement::unlock()
 {
-    std::cout << "Achievement Unlocked!!"<< std::endl;
-    std::cout << name << std::endl;
+    std::cout << "Achievement Unlocked!! "<< name << std::endl;
     unlocked = true;
 }
 

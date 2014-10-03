@@ -17,7 +17,10 @@ AchievementSystem::AchievementSystem()
 
 AchievementSystem::~AchievementSystem()
 {
-    //dtor
+    for(int i =0; i < numOfAchievements; i++)
+    {
+        delete achievements[i];
+    }
 }
 
 void AchievementSystem::update(int type, int value)

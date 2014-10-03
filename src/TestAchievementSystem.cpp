@@ -22,6 +22,9 @@ TEST(AchievementTest, TestKillAchievements)
 
     testPlayer->setKillCount(50);
     ASSERT_EQ(achievements->getNumUnlocked(), 3);
+
+    delete testPlayer;
+    delete achievements;
 }
 
 TEST(AchievementTest, TestPointAchievements)
