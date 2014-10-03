@@ -1,11 +1,13 @@
 #include "Achievement.h"
 #include <iostream>
 
-Achievement::Achievement(std::string name, int requiredValue)
+Achievement::Achievement(std::string name, int type, int requiredValue)
 {
     this->name  = name;
     this->requiredValue = requiredValue;
     this->currentValue = 0;
+    unlocked = false;
+    this->type = type;
 }
 
 Achievement::~Achievement()
@@ -13,16 +15,24 @@ Achievement::~Achievement()
     //dtor
 }
 
-bool Achievement::updateProgress()
+bool Achievement::updateProgress(int type, int newValue)
 {
-    currentValue++;
-    std::cout<< currentValue << " " << requiredValue << std::endl;
-    return currentValue >= requiredValue;
+    if(!unlocked && type == this->type)
+    {
+        currentValue = newValue;
+        //std::cout<< currentValue << " " << requiredValue << std::endl;
+        return currentValue >= requiredValue;
+    }
+    else
+    {
+        return false;
+    }
 }
 
  void Achievement::unlock()
 {
     std::cout << "Achievement Unlocked!!"<< std::endl;
     std::cout << name << std::endl;
+    unlocked = true;
 }
 

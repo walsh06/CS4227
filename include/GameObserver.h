@@ -5,7 +5,7 @@
 class GameObserver
 {
     public:
-        virtual void update() = 0;
+        virtual void update(int type, int value) = 0;
 };
 
 #endif // GAMEOBSERVER_H

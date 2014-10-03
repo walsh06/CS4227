@@ -11,11 +11,14 @@ class AchievementSystem : public GameObserver
         AchievementSystem();
         virtual ~AchievementSystem();
 
-        void update(int value);
+        void update(int type, int value);
+
+        int getNumUnlocked();
     protected:
     private:
         std::vector<Achievement*> achievements;
         int numOfAchievements;
+        int numUnlocked;
 };
 
 #endif // ACHIEVEMENTSYSTEM_H

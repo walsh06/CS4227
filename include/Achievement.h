@@ -6,16 +6,20 @@
 class Achievement
 {
     public:
-        Achievement(std::string name, int requiredValue);
+        Achievement(std::string name, int type, int requiredValue);
         virtual ~Achievement();
 
-        bool updateProgress();
+        bool updateProgress(int type, int newValue);
         void unlock();
+
+        static const int TYPE_KILLS = 1, TYPE_POINTS = 2, TYPE_MONEY = 3;
     protected:
     private:
         int requiredValue;
         int currentValue;
+        bool unlocked;
         std::string name;
+        int type;
 };
 
 #endif // ACHIEVEMENT_H
