@@ -11,8 +11,6 @@ class Achievement
 
         bool updateProgress(int type, int newValue);
         void unlock();
-
-        static const int TYPE_KILLS = 1, TYPE_POINTS = 2, TYPE_MONEY = 3;
     protected:
     private:
         int requiredValue;

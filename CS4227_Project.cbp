@@ -39,6 +39,7 @@
 		<Unit filename="include/AchievementSystem.h" />
 		<Unit filename="include/EnemyFactory.h" />
 		<Unit filename="include/EnemyInterface.h" />
+		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
 		<Unit filename="include/Player.h" />
@@ -49,6 +50,7 @@
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
+		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/RobotEnemy.cpp" />
 		<Unit filename="src/SoundSystem.cpp" />

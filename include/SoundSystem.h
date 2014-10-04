@@ -2,6 +2,8 @@
 #define SOUNDSYSTEM_H
 
 #include "GameObserver.h"
+#include "GameEvent.h"
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -12,7 +14,7 @@ class SoundSystem : public GameObserver
         SoundSystem();
         virtual ~SoundSystem();
 
-        void update(int type, int value);
+        void update(GameEvent event);
     protected:
     private:
         std::vector<std::string> sounds;

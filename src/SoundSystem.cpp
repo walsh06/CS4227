@@ -10,9 +10,9 @@ SoundSystem::~SoundSystem()
     //dtor
 }
 
-void SoundSystem::update(int type, int value)
+void SoundSystem::update(GameEvent event)
 {
-    playSound(type);
+    playSound(event.getType());
 }
 
 void SoundSystem::playSound(int soundNumber)

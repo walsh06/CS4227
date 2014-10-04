@@ -4,6 +4,8 @@
 #include "GameObserver.h"
 #include "Achievement.h"
 #include <vector>
+#include "GameEvent.h"
+
 
 class AchievementSystem : public GameObserver
 {
@@ -11,7 +13,7 @@ class AchievementSystem : public GameObserver
         AchievementSystem();
         virtual ~AchievementSystem();
 
-        void update(int type, int value);
+        void update(GameEvent event);
 
         int getNumUnlocked();
     protected:

@@ -62,6 +62,7 @@ void Player::notify(int type, int value)
 {
     for(int i = 0; i < numOfObservers; i++)
     {
-        observers[i]->update(type, value);
+        GameEvent event(type, value);
+        observers[i]->update(event);
     }
 }
