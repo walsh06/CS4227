@@ -28,17 +28,17 @@ int Player::getMoney()
 void Player::setPoints(int points)
 {
     this->points = points;
-    notify(2, points);
+    notify(GameEvent::TYPE_POINTS, points);
 }
 void Player::setKillCount(int kills)
 {
     this->killCount = kills;
-    notify(1, kills);
+    notify(GameEvent::TYPE_KILLS, kills);
 }
 void Player::setMoney(int money)
 {
     this->money = money;
-    notify(3, money);
+    notify(GameEvent::TYPE_MONEY, money);
 }
 
 void Player::addObserver(GameObserver* o)
