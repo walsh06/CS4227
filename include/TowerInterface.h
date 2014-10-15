@@ -13,10 +13,10 @@ class TowerInterface
 
         virtual int getPower() = 0;
         virtual void setPower(int power) = 0;
-		
+
 		virtual int getX() = 0;
 		virtual void setX(int x) = 0;
-		
+
 		virtual int getY() = 0;
 		virtual void setY(int y) = 0;
 

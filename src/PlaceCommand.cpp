@@ -3,15 +3,14 @@
 
 class PlaceCommand : UndoableCommand
 {
-	private Tower tower;
-	//private string previousText;
-	
-	public PlaceCommand(Tower t, int x, int y)
+	private Tower* tower;
+
+	public PlaceCommand(Tower* t, int x, int y)
 	{
-		this.tower = t;
+		this.tower* = t;
 		tower.setX(x);
 		tower.setY(y);
-		//previousText = this.document.Text;
+
 	}
 
 	public override void Execute()

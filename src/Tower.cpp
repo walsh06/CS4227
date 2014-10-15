@@ -52,7 +52,7 @@ int Tower::getX()
 
 void Tower::setX(int x)
 {
-	return Tower::x;
+	Tower::x = x;
 }
 
 int Tower::getY()
@@ -62,5 +62,5 @@ int Tower::getY()
 
 void Tower::setY(int y)
 {
-	return Tower::y;
+	Tower::y = y;
 }

@@ -12,20 +12,20 @@ class Tower : public TowerInterface
         /** Default destructor */
         virtual ~Tower(int x, int y);
 
-		void placeTower();
-		void removeTower();
-		
+        void placeTower();
+        void removeTower();
+
         int getHealth();
         void setHealth(int health);
 
         int getPower();
         void setPower(int power);
-		
+
 		int getX();
 		void setX(int x);
-		
-		int getY();
-		void setY(int y);
+
+        int getY();
+        void setY(int y);
 
 
     protected:

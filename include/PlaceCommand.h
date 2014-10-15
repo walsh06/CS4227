@@ -7,7 +7,7 @@ class PlaceCommand : public UndoableCommand
 {
 	public:
 		 PlaceCommand(Tower t, int x, int y);
-		 
+
 	protected:
 	private:
 		Tower tower;
