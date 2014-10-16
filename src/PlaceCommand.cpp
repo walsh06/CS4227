@@ -7,20 +7,20 @@ class PlaceCommand : UndoableCommand
 
 	public PlaceCommand(Tower* t, int x, int y)
 	{
-		this.tower* = t;
-		tower.setX(x);
-		tower.setY(y);
+		this.tower* =t;
+		tower->setX(x);
+		tower->setY(y);
 
 	}
 
 	public override void Execute()
 	{
-		tower.placeTower();
+		tower->placeTower();
 	}
 
 	public override void Undo()
 	{
-		tower.removeTower();
+		tower->removeTower();
 		//~Tower();
 	}
 }
