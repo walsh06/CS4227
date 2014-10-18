@@ -2,6 +2,7 @@
 #define ENEMYFACTORY_H
 
 #include <RobotEnemy.h>
+#include "EnemyWave.h"
 
 class EnemyFactory
 {
@@ -10,6 +11,9 @@ class EnemyFactory
         static RobotEnemy *createRobotEnemyWithPower(int power);
         static RobotEnemy *createRobotEnemyWithHealth(int health);
         static RobotEnemy *createRobotEnemyWithHealthAndPower(int health, int power);
+        static EnemyWave* createWaveWithHealthAndPower(int size, int health, int power);
+        static EnemyWave* createWaveWithPower(int size, int power);
+
     protected:
     private:
 };
