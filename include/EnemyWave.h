@@ -17,6 +17,8 @@ class EnemyWave : public EnemyInterface
         void removeEnemy(EnemyInterface* enemy);
         EnemyInterface* getEnemy(int enemyIndex);
 
+        void update();
+
     protected:
     private:
 

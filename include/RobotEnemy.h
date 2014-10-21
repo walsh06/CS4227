@@ -2,7 +2,9 @@
 #define ROBOTENEMY_H
 
 #include <EnemyInterface.h>
-
+#include "EnemyOrientation.h"
+#include "EnemyHorizontal.h"
+#include "EnemyVertical.h"
 
 class RobotEnemy : public EnemyInterface
 {
@@ -19,11 +21,16 @@ class RobotEnemy : public EnemyInterface
         int getPower();
         void setPower(int power);
 
+        void update();
+
 
     protected:
     private:
-        int health;
-        int power;
+        int health, power, speed;
+        int posX, posY;
+
+        EnemyOrientation* moveStrategy;
+
 };
 
 #endif // ROBOTENEMY_H

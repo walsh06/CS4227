@@ -10,14 +10,25 @@ EnemyWave::~EnemyWave()
     //dtor
 }
 
+void EnemyWave::update()
+{
+    //update the enemies each tick
+    for (int i = 0; i < waveSize; i++ )
+    {
+        wave[i]->update();
+    }
+}
+
 void EnemyWave::addEnemy(EnemyInterface* enemy)
 {
     wave.push_back(enemy);
 }
+
 void EnemyWave::removeEnemy(EnemyInterface* enemy)
 {
 
 }
+
 
 EnemyInterface* EnemyWave::getEnemy(int enemyIndex)
 {

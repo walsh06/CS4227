@@ -8,9 +8,7 @@ class EnemyInterface
         /** Destructor */
         virtual ~EnemyInterface() {}
 
-        virtual void setHealth(int health) = 0;
-
-        virtual void setPower(int power) = 0;
+        virtual void update() = 0;
 
     protected:
     private:

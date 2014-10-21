@@ -4,11 +4,19 @@ RobotEnemy::RobotEnemy()
 {
     RobotEnemy::health = 10;
     RobotEnemy::power = 10;
+    this->speed = 2;
+    moveStrategy = new EnemyHorizontal();
 }
 
 RobotEnemy::~RobotEnemy()
 {
     //dtor
+}
+
+void RobotEnemy::update()
+{
+    //update the enemies each tick
+    moveStrategy->move(posX, posY, speed);
 }
 
 int RobotEnemy::getHealth()
