@@ -34,14 +34,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add option="-lpthread" />
+			<Add directory="/usr/include/gtest" />
 		</Compiler>
+		<Linker>
+			<Add library="/usr/src/gtest/libgtest.a" />
+			<Add directory="/usr/include/gtest" />
+		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
 		<Unit filename="include/BoostItem.h" />
 		<Unit filename="include/Enemy.h" />
 		<Unit filename="include/EnemyFactory.h" />
+		<Unit filename="include/EnemyHorizontal.h" />
 		<Unit filename="include/EnemyInterface.h" />
 		<Unit filename="include/EnemyItemDecorator.h" />
+		<Unit filename="include/EnemyOrientation.h" />
+		<Unit filename="include/EnemyVertical.h" />
+		<Unit filename="include/EnemyWave.h" />
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
@@ -55,6 +64,9 @@
 		<Unit filename="src/Enemy.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
 		<Unit filename="src/EnemyItemDecorator.cpp" />
+		<Unit filename="src/EnemyHorizontal.cpp" />
+		<Unit filename="src/EnemyVertical.cpp" />
+		<Unit filename="src/EnemyWave.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/SoundSystem.cpp" />

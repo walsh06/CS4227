@@ -24,3 +24,23 @@ Enemy *EnemyFactory::createEnemyEnemyWithHealthAndPower(int health, int power)
     enemy->setHealth(health);
     return enemy;
 }
+
+EnemyWave* EnemyFactory::createWaveWithHealthAndPower(int size, int health, int power)
+{
+    EnemyWave *wave = new EnemyWave(size);
+    for(int i = 0; i < size; i++)
+    {
+        wave->addEnemy(EnemyFactory::createRobotEnemyWithHealthAndPower(health, power));
+    }
+    return wave;
+}
+
+EnemyWave* EnemyFactory::createWaveWithPower(int size, int power)
+{
+    EnemyWave *wave = new EnemyWave(size);
+    for(int i = 0; i < size; i++)
+    {
+        wave->addEnemy(EnemyFactory::createRobotEnemyWithPower(power));
+    }
+    return wave;
+}
