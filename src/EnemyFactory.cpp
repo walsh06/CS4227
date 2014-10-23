@@ -1,28 +1,26 @@
 #include "EnemyFactory.h"
 
-RobotEnemy *EnemyFactory::createRobotEnemy()
+Enemy *EnemyFactory::createEnemyEnemy()
 {
-    return new RobotEnemy();
+    return new Enemy();
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithPower(int power)
+Enemy *EnemyFactory::createEnemyEnemyWithPower(int power)
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setPower(power);
-    return robot;
+    Enemy *enemy = new Enemy();
+    return enemy;
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithHealth(int health)
+Enemy *EnemyFactory::createEnemyEnemyWithHealth(int health)
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setHealth(health);
-    return robot;
+    Enemy *enemy = new Enemy();
+    enemy->setHealth(health);
+    return enemy;
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithHealthAndPower(int health, int power)
+Enemy *EnemyFactory::createEnemyEnemyWithHealthAndPower(int health, int power)
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setPower(power);
-    robot->setHealth(health);
-    return robot;
+    Enemy *enemy = new Enemy();
+    enemy->setHealth(health);
+    return enemy;
 }

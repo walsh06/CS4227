@@ -1,39 +1,35 @@
 #include "TestEnemyFactory.h"
 
-TEST(RobotEnemyTest, RobotEnemyDefaultTest)
+TEST(EnemyEnemyTest, EnemyEnemyDefaultTest)
 {
-    RobotEnemy *robot = EnemyFactory::createRobotEnemy();
-    ASSERT_EQ(robot->getHealth(), 10);
-    ASSERT_EQ(robot->getPower(), 10);
+    Enemy *Enemy = EnemyFactory::createEnemyEnemy();
+    ASSERT_EQ(Enemy->getHealth(), 10);
 }
 
 
-TEST(RobotEnemyTest, RobotEnemyHealthTest)
+TEST(EnemyEnemyTest, EnemyEnemyHealthTest)
 {
     int newHealth = 11;
 
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithHealth(newHealth);
-    ASSERT_EQ(robot->getHealth(), newHealth);
-    ASSERT_EQ(robot->getPower(), 10);
+    Enemy *Enemy = EnemyFactory::createEnemyEnemyWithHealth(newHealth);
+    ASSERT_EQ(Enemy->getHealth(), newHealth);
 }
 
 
-TEST(RobotEnemyTest, RobotEnemyPowerTest)
+TEST(EnemyEnemyTest, EnemyEnemyPowerTest)
 {
     int newPower = 11;
 
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithPower(newPower);
-    ASSERT_EQ(robot->getHealth(), 10);
-    ASSERT_EQ(robot->getPower(), newPower);
+    Enemy *Enemy = EnemyFactory::createEnemyEnemyWithPower(newPower);
+    ASSERT_EQ(Enemy->getHealth(), 10);
 }
 
-TEST(RobotEnemyTest, RobotEnemyHealthAndPowerTest)
+TEST(EnemyEnemyTest, EnemyEnemyHealthAndPowerTest)
 {
     int newHealth = 11;
     int newPower = 11;
 
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithHealthAndPower(newHealth, newPower);
-    ASSERT_EQ(robot->getHealth(), newHealth);
-    ASSERT_EQ(robot->getPower(), newPower);
+    Enemy *Enemy = EnemyFactory::createEnemyEnemyWithHealthAndPower(newHealth, newPower);
+    ASSERT_EQ(Enemy->getHealth(), newHealth);
 }
 
