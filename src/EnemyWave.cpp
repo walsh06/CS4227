@@ -26,7 +26,14 @@ void EnemyWave::addEnemy(EnemyInterface* enemy)
 
 void EnemyWave::removeEnemy(EnemyInterface* enemy)
 {
-
+    for(int i = 0; i < waveSize; i++)
+    {
+        if(wave[i] == enemy)
+        {
+            wave.erase(wave.begin() + i);
+            break;
+        }
+    }
 }
 
 
@@ -39,7 +46,7 @@ void EnemyWave::setHealth(int health)
 {
     for(int i = 0; i < waveSize; i++)
     {
-        wave[i]->setHealth(health);
+        //wave[i]->setHealth(health);
     }
 }
 
@@ -47,6 +54,6 @@ void EnemyWave::setPower(int power)
 {
     for(int i = 0; i < waveSize; i++)
     {
-        wave[i]->setPower(power);
+        //wave[i]->setPower(power);
     }
 }

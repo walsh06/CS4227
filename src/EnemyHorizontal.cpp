@@ -12,5 +12,5 @@ EnemyHorizontal::~EnemyHorizontal()
 
 void EnemyHorizontal::move(int &posX, int &posY, int speed)
 {
-    posx-=speed;
+    posX-=speed;
 }
