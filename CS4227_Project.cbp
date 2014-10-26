@@ -42,6 +42,8 @@
 		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
+		<Unit filename="include/Context.h" />
+		<Unit filename="include/Dispatcher.h" />
 		<Unit filename="include/EnemyFactory.h" />
 		<Unit filename="include/EnemyHorizontal.h" />
 		<Unit filename="include/EnemyInterface.h" />
@@ -51,6 +53,7 @@
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
+		<Unit filename="include/Interceptor.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/RobotEnemy.h" />
 		<Unit filename="include/SoundSystem.h" />
@@ -58,6 +61,8 @@
 		<Unit filename="include/TestEnemyFactory.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
+		<Unit filename="src/Context.cpp" />
+		<Unit filename="src/Dispatcher.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
 		<Unit filename="src/EnemyHorizontal.cpp" />
 		<Unit filename="src/EnemyVertical.cpp" />
