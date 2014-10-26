@@ -31,6 +31,7 @@ void EnemyWave::removeEnemy(EnemyInterface* enemy)
         if(wave[i] == enemy)
         {
             wave.erase(wave.begin() + i);
+            waveSize--;
             break;
         }
     }
