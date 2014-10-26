@@ -65,25 +65,30 @@
 
 1414023709 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/GameEvent.h
 
-1414067449 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyFactory.cpp
+1414338972 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyFactory.cpp
 	"EnemyFactory.h"
 
-1414067381 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyFactory.h
+1414339021 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyFactory.h
 	<Enemy.h>
+	"BasicEnemy.h"
+	"SpeedItem.h"
+	"AttackItem.h"
+	"DefenseItem.h"
 
 1414066734 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/RobotEnemy.h
 	<EnemyInterface.h>
 
-1414066621 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyInterface.h
+1414105147 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyInterface.h
 
 1414023709 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/GameEvent.cpp
 	"GameEvent.h"
 
-1414068290 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/main.cpp
+1414323727 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/main.cpp
 	<gtest/gtest.h>
 	<EnemyItemDecorator.h>
 	<Enemy.h>
-	<BoostItem.h>
+	<BasicEnemy.h>
+	<SpeedItem.h>
 
 1414023709 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/Player.cpp
 	"Player.h"
@@ -116,29 +121,84 @@
 	"Player.h"
 	"AchievementSystem.h"
 
-1414067679 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/TestEnemyFactory.cpp
+1414352288 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/TestEnemyFactory.cpp
 	"TestEnemyFactory.h"
 
 1414023709 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/TestEnemyFactory.h
 	<EnemyFactory.h>
 	<gtest/gtest.h>
 
-1414068155 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/BoostItem.cpp
+1414286923 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/BoostItem.cpp
 	"BoostItem.h"
 
-1414067749 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/BoostItem.h
+1414287098 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/BoostItem.h
 	<EnemyItemDecorator.h>
 
-1414068339 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyItemDecorator.h
+1414105513 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyItemDecorator.h
 	<EnemyInterface.h>
 	<Enemy.h>
 
-1414068263 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyItemDecorator.cpp
+1414107569 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyItemDecorator.cpp
 	"EnemyItemDecorator.h"
 
-1414067917 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/Enemy.h
+1414107361 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/Enemy.h
 	<EnemyInterface.h>
+	"EnemyOrientation.h"
+	"EnemyHorizontal.h"
+	"EnemyVertical.h"
 
-1414067304 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/Enemy.cpp
+1414106714 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/Enemy.cpp
 	"Enemy.h"
+
+1414104461 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyWave.h
+	"EnemyInterface.h"
+	<vector>
+
+1414104461 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyOrientation.h
+
+1414104461 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyHorizontal.h
+	<EnemyOrientation.h>
+
+1414104461 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyVertical.h
+	<EnemyOrientation.h>
+
+1414104461 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyHorizontal.cpp
+	"EnemyHorizontal.h"
+
+1414104461 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyVertical.cpp
+	"EnemyVertical.h"
+
+1414104461 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyWave.cpp
+	"EnemyWave.h"
+
+1414113503 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/BasicEnemy.cpp
+	"BasicEnemy.h"
+
+1414107351 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/BasicEnemy.h
+	<Enemy.h>
+
+1414287009 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/AttackItem.cpp
+	"AttackItem.h"
+
+1414287039 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/AttackItem.h
+	<EnemyItemDecorator.h>
+
+1414287437 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/DefenseItem.cpp
+	"DefenseItem.h"
+
+1414287416 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/DefenseItem.h
+	<EnemyItemDecorator.h>
+
+1414323787 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/SpeedItem.h
+	<EnemyItemDecorator.h>
+
+1414323727 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/SpeedItem.cpp
+	"SpeedItem.h"
+
+1414339005 source:/home/cathal/Desktop/Modules/JJ/Project/CS4227/src/EnemyWaveFactory.cpp
+	"EnemyWaveFactory.h"
+
+1414352288 /home/cathal/Desktop/Modules/JJ/Project/CS4227/include/EnemyWaveFactory.h
+	"EnemyFactory.h"
+	"EnemyWave.h"
 

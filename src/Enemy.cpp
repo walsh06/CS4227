@@ -7,6 +7,8 @@ EnemyInterface()
     this->attack = 1;
     this->defense = 1;
     this->speed = 1;
+    moveStrategy = new EnemyHorizontal();
+
 }
 
 Enemy::~Enemy()
@@ -14,28 +16,9 @@ Enemy::~Enemy()
     //dtor
 }
 
-int Enemy::getHealth()
-{
-    return this->health;
-}
 
-void Enemy::setHealth(int health)
+void Enemy::update()
 {
-    Enemy::health = health;
+    //update the enemies each tick
+    moveStrategy->move(posX, posY, speed);
 }
-
-int Enemy::getAttack()
-{
-    return this->attack;
-}
-
-int Enemy::getDefense()
-{
-    return this->defense;
-}
-
-int Enemy::getSpeed()
-{
-    return this->speed;
-}
-

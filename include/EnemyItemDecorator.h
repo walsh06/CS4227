@@ -4,7 +4,7 @@
 #include <EnemyInterface.h>
 #include <Enemy.h>
 
-class EnemyItemDecorator : public EnemyInterface
+class EnemyItemDecorator : public Enemy
 {
     public:
         Enemy* tempEnemy;

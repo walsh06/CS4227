@@ -1,46 +1,60 @@
 #include "EnemyFactory.h"
 
-Enemy *EnemyFactory::createEnemyEnemy()
+Enemy *EnemyFactory::createEnemy()
 {
-    return new Enemy();
+    return new BasicEnemy();
 }
 
-Enemy *EnemyFactory::createEnemyEnemyWithPower(int power)
+Enemy *EnemyFactory::createSpeedEnemy()
 {
-    Enemy *enemy = new Enemy();
+
+    Enemy *enemy = new SpeedItem(new BasicEnemy());
     return enemy;
 }
 
-Enemy *EnemyFactory::createEnemyEnemyWithHealth(int health)
+Enemy *EnemyFactory::createAttackEnemy()
 {
-    Enemy *enemy = new Enemy();
+
+    Enemy *enemy = new AttackItem(new BasicEnemy());
+    return enemy;
+}
+
+Enemy *EnemyFactory::createDefenseEnemy()
+{
+
+    Enemy *enemy = new DefenseItem(new BasicEnemy());
+    return enemy;
+}
+
+Enemy *EnemyFactory::createAttackDefenseEnemy()
+{
+
+    Enemy *enemy = new AttackItem(new DefenseItem(new BasicEnemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createSpeedDefenseEnemy()
+{
+
+    Enemy *enemy = new SpeedItem(new DefenseItem(new BasicEnemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createAttackSpeedEnemy()
+{
+
+    Enemy *enemy = new SpeedItem(new AttackItem(new BasicEnemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createEnemyWithHealth(int health)
+{
+
+    Enemy *enemy = new BasicEnemy();
     enemy->setHealth(health);
     return enemy;
 }
 
-Enemy *EnemyFactory::createEnemyEnemyWithHealthAndPower(int health, int power)
-{
-    Enemy *enemy = new Enemy();
-    enemy->setHealth(health);
-    return enemy;
-}
 
-EnemyWave* EnemyFactory::createWaveWithHealthAndPower(int size, int health, int power)
-{
-    EnemyWave *wave = new EnemyWave(size);
-    for(int i = 0; i < size; i++)
-    {
-        wave->addEnemy(EnemyFactory::createRobotEnemyWithHealthAndPower(health, power));
-    }
-    return wave;
-}
 
-EnemyWave* EnemyFactory::createWaveWithPower(int size, int power)
-{
-    EnemyWave *wave = new EnemyWave(size);
-    for(int i = 0; i < size; i++)
-    {
-        wave->addEnemy(EnemyFactory::createRobotEnemyWithPower(power));
-    }
-    return wave;
-}
+

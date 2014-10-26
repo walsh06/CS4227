@@ -10,6 +10,7 @@ EnemyItemDecorator::~EnemyItemDecorator()
     //dtor
 }
 
+
 int EnemyItemDecorator::getAttack()
 {
     return this->tempEnemy->getAttack();

@@ -3,17 +3,26 @@
 
 
 #include <Enemy.h>
-#include "EnemyWave.h"
+#include "BasicEnemy.h"
+#include "SpeedItem.h"
+#include "AttackItem.h"
+#include "DefenseItem.h"
+
+
+
 
 class EnemyFactory
 {
     public:
-        static Enemy *createEnemyEnemy();
-        static Enemy *createEnemyEnemyWithPower(int power);
-        static Enemy *createEnemyEnemyWithHealth(int health);
-        static Enemy *createEnemyEnemyWithHealthAndPower(int health, int power);
-        static EnemyWave* createWaveWithHealthAndPower(int size, int health, int power);
-        static EnemyWave* createWaveWithPower(int size, int power);
+        static Enemy *createEnemy();
+        static Enemy *createEnemyWithHealth(int health);
+
+        static Enemy *createSpeedEnemy();
+        static Enemy *createAttackEnemy();
+        static Enemy *createDefenseEnemy();
+        static Enemy *createSpeedDefenseEnemy();
+        static Enemy *createAttackDefenseEnemy();
+        static Enemy *createAttackSpeedEnemy();
 
     protected:
     private:
