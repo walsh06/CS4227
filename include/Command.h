@@ -1,11 +1,13 @@
 #ifndef COMMAND_H
 #define COMMAND_H
 
+
 class Command
 {
-public:
-    virtual bool Execute() = 0;
-    virtual ~Command() { }
+    public:
+        virtual void execute() = 0;
+    protected:
+    private:
 };
 
-#endif //COMMAND_H
+#endif // COMMAND_H
