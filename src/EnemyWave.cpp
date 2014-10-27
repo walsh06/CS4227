@@ -22,6 +22,7 @@ void EnemyWave::update()
 void EnemyWave::addEnemy(EnemyInterface* enemy)
 {
     wave.push_back(enemy);
+    waveSize++;
 }
 
 void EnemyWave::removeEnemy(EnemyInterface* enemy)
