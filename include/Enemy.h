@@ -1,8 +1,7 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-#include <EnemyInterface.h>
-
+#include "EnemyInterface.h"
 #include "EnemyOrientation.h"
 #include "EnemyHorizontal.h"
 #include "EnemyVertical.h"

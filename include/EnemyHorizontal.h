@@ -1,7 +1,7 @@
 #ifndef ENEMYHORIZONTAL_H
 #define ENEMYHORIZONTAL_H
 
-#include <EnemyOrientation.h>
+#include "EnemyOrientation.h"
 
 
 class EnemyHorizontal : public EnemyOrientation

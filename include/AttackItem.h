@@ -1,8 +1,7 @@
 #ifndef ATTACKITEM_H
 #define ATTACKITEM_H
 
-#include <EnemyItemDecorator.h>
-
+#include "EnemyItemDecorator.h"
 
 class AttackItem : public EnemyItemDecorator
 {

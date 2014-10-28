@@ -1,7 +1,7 @@
 #ifndef DEFENSEITEM_H
 #define DEFENSEITEM_H
 
-#include <EnemyItemDecorator.h>
+#include "EnemyItemDecorator.h"
 
 
 class DefenseItem : public EnemyItemDecorator

@@ -1,7 +1,7 @@
 #ifndef SPEEDITEM_H
 #define SPEEDITEM_H
 
-#include <EnemyItemDecorator.h>
+#include "EnemyItemDecorator.h"
 
 
 class SpeedItem : public EnemyItemDecorator

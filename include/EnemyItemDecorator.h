@@ -1,8 +1,8 @@
 #ifndef ENEMYITEM_H
 #define ENEMYITEM_H
 
-#include <EnemyInterface.h>
-#include <Enemy.h>
+#include "EnemyInterface.h"
+#include "Enemy.h"
 
 class EnemyItemDecorator : public Enemy
 {
