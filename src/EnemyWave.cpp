@@ -43,19 +43,3 @@ EnemyInterface* EnemyWave::getEnemy(int enemyIndex)
 {
     return wave[enemyIndex];
 }
-
-void EnemyWave::setHealth(int health)
-{
-    for(int i = 0; i < waveSize; i++)
-    {
-        //wave[i]->setHealth(health);
-    }
-}
-
-void EnemyWave::setPower(int power)
-{
-    for(int i = 0; i < waveSize; i++)
-    {
-        //wave[i]->setPower(power);
-    }
-}

@@ -15,11 +15,11 @@ class Enemy : public EnemyInterface
         /** Default destructor */
         virtual ~Enemy();
 
-        virtual int getHealth() = 0;
-        virtual int getAttack()  = 0;
-        virtual int getDefense()  = 0;
-        virtual int getSpeed()  = 0;
-        virtual void setHealth(int health)  = 0;
+        virtual int getHealth() ;
+        virtual int getAttack() ;
+        virtual int getDefense()  ;
+        virtual int getSpeed()  ;
+        virtual void setHealth(int health)  ;
         void update();
 
     protected:

@@ -2,55 +2,55 @@
 
 Enemy *EnemyFactory::createEnemy()
 {
-    return new BasicEnemy();
+    return new Enemy();
 }
 
 Enemy *EnemyFactory::createSpeedEnemy()
 {
 
-    Enemy *enemy = new SpeedItem(new BasicEnemy());
+    Enemy *enemy = new SpeedItem(new Enemy());
     return enemy;
 }
 
 Enemy *EnemyFactory::createAttackEnemy()
 {
 
-    Enemy *enemy = new AttackItem(new BasicEnemy());
+    Enemy *enemy = new AttackItem(new Enemy());
     return enemy;
 }
 
 Enemy *EnemyFactory::createDefenseEnemy()
 {
 
-    Enemy *enemy = new DefenseItem(new BasicEnemy());
+    Enemy *enemy = new DefenseItem(new Enemy());
     return enemy;
 }
 
 Enemy *EnemyFactory::createAttackDefenseEnemy()
 {
 
-    Enemy *enemy = new AttackItem(new DefenseItem(new BasicEnemy()));
+    Enemy *enemy = new AttackItem(new DefenseItem(new Enemy()));
     return enemy;
 }
 
 Enemy *EnemyFactory::createSpeedDefenseEnemy()
 {
 
-    Enemy *enemy = new SpeedItem(new DefenseItem(new BasicEnemy()));
+    Enemy *enemy = new SpeedItem(new DefenseItem(new Enemy()));
     return enemy;
 }
 
 Enemy *EnemyFactory::createAttackSpeedEnemy()
 {
 
-    Enemy *enemy = new SpeedItem(new AttackItem(new BasicEnemy()));
+    Enemy *enemy = new SpeedItem(new AttackItem(new Enemy()));
     return enemy;
 }
 
 Enemy *EnemyFactory::createEnemyWithHealth(int health)
 {
 
-    Enemy *enemy = new BasicEnemy();
+    Enemy *enemy = new Enemy();
     enemy->setHealth(health);
     return enemy;
 }

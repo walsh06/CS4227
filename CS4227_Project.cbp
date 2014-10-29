@@ -43,7 +43,6 @@
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
 		<Unit filename="include/AttackItem.h" />
-		<Unit filename="include/BasicEnemy.h" />
 		<Unit filename="include/DefenseItem.h" />
 		<Unit filename="include/Enemy.h" />
 		<Unit filename="include/EnemyFactory.h" />
@@ -55,6 +54,7 @@
 		<Unit filename="include/EnemyWave.h" />
 		<Unit filename="include/EnemyWaveFactory.h" />
 		<Unit filename="include/GameEvent.h" />
+		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/SoundSystem.h" />
 		<Unit filename="include/SpeedItem.h" />
@@ -63,7 +63,6 @@
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
 		<Unit filename="src/AttackItem.cpp" />
-		<Unit filename="src/BasicEnemy.cpp" />
 		<Unit filename="src/DefenseItem.cpp" />
 		<Unit filename="src/Enemy.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
