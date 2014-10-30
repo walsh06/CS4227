@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Command Class.
+//Concrete Command Header.
 class MoveRightCommand:public Command
 {
     public:

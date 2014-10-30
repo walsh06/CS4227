@@ -1,4 +1,4 @@
-#include "TestAchievementSystem.h"
+/*#include "TestAchievementSystem.h"
 
 TEST(AchievementTest, TestKillAchievements)
 {
@@ -52,4 +52,4 @@ TEST(AchievementTest, TestPointAchievements)
 
     testPlayer->setPoints(110);
     ASSERT_EQ(achievements->getNumUnlocked(), 3);
-}
+}*/
