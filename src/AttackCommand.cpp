@@ -1,20 +1,21 @@
 #include "AttackCommand.h"
+#include "Player.h"
 
-AttackCommand::AttackCommand(PlayerMovement* playerMovement)
+AttackCommand::AttackCommand(Player* player)
 {
-    this->playerMovement = playerMovement;
+    this->player = player;
 }
 
 //Destructor
 AttackCommand::~AttackCommand()
 {
-    this->playerMovement = NULL;
-    delete playerMovement;
+    this->player = NULL;
+    delete player;
 }
 
 //Command allowing the player to move downwards.
 void AttackCommand::execute()
 {
-    playerMovement->moveDown();
+    player->moveDown();
 }
 

@@ -1,4 +1,4 @@
-/*#include "TestEnemyFactory.h"
+#include "TestEnemyFactory.h"
 
 TEST(RobotEnemyTest, RobotEnemyDefaultTest)
 {
@@ -36,4 +36,3 @@ TEST(RobotEnemyTest, RobotEnemyHealthAndPowerTest)
     ASSERT_EQ(robot->getHealth(), newHealth);
     ASSERT_EQ(robot->getPower(), newPower);
 }
-*/

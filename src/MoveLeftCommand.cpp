@@ -1,22 +1,22 @@
 #include "MoveLeftCommand.h"
-#include "PlayerMovement.h"
+#include "Player.h"
 
 //Concrete Command to move left takes a player movement Reciever.
-MoveLeftCommand::MoveLeftCommand(PlayerMovement* playerMovement)
+MoveLeftCommand::MoveLeftCommand(Player* player)
 {
-    this->playerMovement = playerMovement;
+    this->player = player;
 }
 
 //Destructor
 MoveLeftCommand::~MoveLeftCommand()
 {
-    this->playerMovement = NULL;
-    delete playerMovement;
+    this->player = NULL;
+    delete player;
 
 }
 
 //Command allowing the player to move left.
 void MoveLeftCommand::execute()
 {
-    playerMovement->moveLeft();
+    player->moveLeft();
 }

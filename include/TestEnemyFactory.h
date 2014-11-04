@@ -2,7 +2,7 @@
 #define TESTENEMYFACTORY_H
 
 #include <EnemyFactory.h>
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
 
 class TestEnemyFactory : public EnemyFactory

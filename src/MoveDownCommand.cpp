@@ -1,21 +1,21 @@
 #include "MoveDownCommand.h"
-#include "PlayerMovement.h"
+#include "Player.h"
 
 //Concrete Command to move downwards takes a player movement Reciever.
-MoveDownCommand::MoveDownCommand(PlayerMovement* playerMovement)
+MoveDownCommand::MoveDownCommand(Player* player)
 {
-    this->playerMovement = playerMovement;
+    this->player = player;
 }
 
 //Destructor
 MoveDownCommand::~MoveDownCommand()
 {
-    this->playerMovement = NULL;
-    delete playerMovement;
+    this->player = NULL;
+    delete player;
 }
 
 //Command allowing the player to move downwards.
 void MoveDownCommand::execute()
 {
-    playerMovement->moveDown();
+    player->moveDown();
 }

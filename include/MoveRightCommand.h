@@ -1,6 +1,6 @@
 #ifndef MOVERIGHTCOMMAND_H
 #define MOVERIGHTCOMMAND_H
-#include "PlayerMovement.h"
+#include "Player.h"
 #include <iostream>
 #include "Command.h"
 
@@ -10,12 +10,12 @@ using namespace std;
 class MoveRightCommand:public Command
 {
     public:
-        MoveRightCommand(PlayerMovement* playerMovement);
+        MoveRightCommand(Player* player);
         virtual ~MoveRightCommand();
         void execute();
     protected:
     private:
-        PlayerMovement* playerMovement;
+        Player* player;
 };
 
 #endif // MOVERIGHTCOMMAND_H
