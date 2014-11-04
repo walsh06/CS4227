@@ -20,7 +20,7 @@ Enemy::~Enemy()
 void Enemy::update()
 {
     //update the enemies each tick
-    moveStrategy->move(posX, posY, speed);
+    moveStrategy->moveDirection(posX, posY, speed);
 }
 
 
@@ -47,4 +47,9 @@ int Enemy::getDefense()
 int Enemy::getSpeed()
 {
     return this->speed;
+}
+
+void Enemy::setStrategy(EnemyOrientation* moveStrategy)
+{
+    this->moveStrategy = moveStrategy;
 }

@@ -10,7 +10,7 @@ class EnemyVertical : public EnemyOrientation
         EnemyVertical();
         virtual ~EnemyVertical();
 
-        void move(int &posX, int &posY, int speed);
+        void moveDirection(int &posX, int &posY, int speed);
     protected:
     private:
 };

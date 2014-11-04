@@ -10,7 +10,7 @@ EnemyHorizontal::~EnemyHorizontal()
     //dtor
 }
 
-void EnemyHorizontal::move(int &posX, int &posY, int speed)
+void EnemyHorizontal::moveDirection(int &posX, int &posY, int speed)
 {
     posX-=speed;
 }

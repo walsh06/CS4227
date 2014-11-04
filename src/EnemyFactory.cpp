@@ -1,56 +1,65 @@
 #include "EnemyFactory.h"
 
-Enemy *EnemyFactory::createEnemy()
+Enemy *EnemyFactory::createEnemy(EnemyOrientation* moveStrategy)
 {
-    return new Enemy();
+    Enemy *enemy = new Enemy();
+    enemy->setStrategy(moveStrategy);
+    return enemy;
 }
 
-Enemy *EnemyFactory::createSpeedEnemy()
+Enemy *EnemyFactory::createSpeedEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new SpeedItem(new Enemy());
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createAttackEnemy()
+Enemy *EnemyFactory::createAttackEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new AttackItem(new Enemy());
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createDefenseEnemy()
+Enemy *EnemyFactory::createDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new DefenseItem(new Enemy());
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createAttackDefenseEnemy()
+Enemy *EnemyFactory::createAttackDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new AttackItem(new DefenseItem(new Enemy()));
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createSpeedDefenseEnemy()
+Enemy *EnemyFactory::createSpeedDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new SpeedItem(new DefenseItem(new Enemy()));
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createAttackSpeedEnemy()
+Enemy *EnemyFactory::createAttackSpeedEnemy(EnemyOrientation* moveStrategy)
 {
 
     Enemy *enemy = new SpeedItem(new AttackItem(new Enemy()));
+    enemy->setStrategy(moveStrategy);
     return enemy;
 }
 
-Enemy *EnemyFactory::createEnemyWithHealth(int health)
+Enemy *EnemyFactory::createEnemyWithHealth(EnemyOrientation* moveStrategy,int health)
 {
 
     Enemy *enemy = new Enemy();
+    enemy->setStrategy(moveStrategy);
     enemy->setHealth(health);
     return enemy;
 }
