@@ -1,28 +1,60 @@
 #include "EnemyFactory.h"
 
-RobotEnemy *EnemyFactory::createRobotEnemy()
+Enemy *EnemyFactory::createEnemy()
 {
-    return new RobotEnemy();
+    return new Enemy();
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithPower(int power)
+Enemy *EnemyFactory::createSpeedEnemy()
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setPower(power);
-    return robot;
+
+    Enemy *enemy = new SpeedItem(new Enemy());
+    return enemy;
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithHealth(int health)
+Enemy *EnemyFactory::createAttackEnemy()
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setHealth(health);
-    return robot;
+
+    Enemy *enemy = new AttackItem(new Enemy());
+    return enemy;
 }
 
-RobotEnemy *EnemyFactory::createRobotEnemyWithHealthAndPower(int health, int power)
+Enemy *EnemyFactory::createDefenseEnemy()
 {
-    RobotEnemy *robot = new RobotEnemy();
-    robot->setPower(power);
-    robot->setHealth(health);
-    return robot;
+
+    Enemy *enemy = new DefenseItem(new Enemy());
+    return enemy;
 }
+
+Enemy *EnemyFactory::createAttackDefenseEnemy()
+{
+
+    Enemy *enemy = new AttackItem(new DefenseItem(new Enemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createSpeedDefenseEnemy()
+{
+
+    Enemy *enemy = new SpeedItem(new DefenseItem(new Enemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createAttackSpeedEnemy()
+{
+
+    Enemy *enemy = new SpeedItem(new AttackItem(new Enemy()));
+    return enemy;
+}
+
+Enemy *EnemyFactory::createEnemyWithHealth(int health)
+{
+
+    Enemy *enemy = new Enemy();
+    enemy->setHealth(health);
+    return enemy;
+}
+
+
+
+

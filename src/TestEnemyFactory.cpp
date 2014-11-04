@@ -1,39 +1,73 @@
 #include "TestEnemyFactory.h"
 
-TEST(RobotEnemyTest, RobotEnemyDefaultTest)
+TEST(EnemyTest, BasicEnemyTest)
 {
-    RobotEnemy *robot = EnemyFactory::createRobotEnemy();
-    ASSERT_EQ(robot->getHealth(), 10);
-    ASSERT_EQ(robot->getPower(), 10);
+    Enemy *enemy = EnemyFactory::createEnemy();
+    ASSERT_EQ(enemy->getHealth(), 10);
 }
 
-
-TEST(RobotEnemyTest, RobotEnemyHealthTest)
+TEST(EnemyTest, EnemyWithHealthTest)
 {
-    int newHealth = 11;
-
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithHealth(newHealth);
-    ASSERT_EQ(robot->getHealth(), newHealth);
-    ASSERT_EQ(robot->getPower(), 10);
+    int newHealth = 15;
+    Enemy *enemy = EnemyFactory::createEnemyWithHealth(newHealth);
+    ASSERT_EQ(enemy->getHealth(), newHealth);
+    ASSERT_EQ(enemy->getAttack(), 1);
+    ASSERT_EQ(enemy->getDefense(), 1);
+    ASSERT_EQ(enemy->getSpeed(), 1);
 }
 
-
-TEST(RobotEnemyTest, RobotEnemyPowerTest)
+TEST(EnemyTest, SpeedEnemyTest)
 {
-    int newPower = 11;
+    int newSpeed= 3;
 
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithPower(newPower);
-    ASSERT_EQ(robot->getHealth(), 10);
-    ASSERT_EQ(robot->getPower(), newPower);
+    Enemy *enemy = EnemyFactory::createSpeedEnemy();
+    ASSERT_EQ(enemy->getSpeed(), newSpeed);
 }
 
-TEST(RobotEnemyTest, RobotEnemyHealthAndPowerTest)
+TEST(EnemyTest, AttackEnemyTest)
 {
-    int newHealth = 11;
-    int newPower = 11;
+    int newAttack = 3;
 
-    RobotEnemy *robot = EnemyFactory::createRobotEnemyWithHealthAndPower(newHealth, newPower);
-    ASSERT_EQ(robot->getHealth(), newHealth);
-    ASSERT_EQ(robot->getPower(), newPower);
+    Enemy *enemy = EnemyFactory::createAttackEnemy();
+    ASSERT_EQ(enemy->getAttack(), newAttack);
 }
+
+TEST(EnemyTest, DefenseEnemyTest)
+{
+    int newDefense = 3;
+
+    Enemy *enemy = EnemyFactory::createDefenseEnemy();
+    ASSERT_EQ(enemy->getDefense(), newDefense);
+}
+
+TEST(EnemyTest, AttackDefenseEnemyTest)
+{
+    int newDefense = 3;
+    int newAttack = 3;
+
+    Enemy *enemy = EnemyFactory::createAttackDefenseEnemy();
+    ASSERT_EQ(enemy->getDefense(), newDefense);
+    ASSERT_EQ(enemy->getAttack(), newAttack);
+}
+
+TEST(EnemyTest, SpeedDefenseEnemyTest)
+{
+    int newDefense = 3;
+    int newSpeed= 3;
+
+    Enemy *enemy = EnemyFactory::createSpeedDefenseEnemy();
+    ASSERT_EQ(enemy->getDefense(), newDefense);
+    ASSERT_EQ(enemy->getSpeed(), newSpeed);
+}
+
+TEST(EnemyTest, SpeedAttackEnemyTest)
+{
+    int newAttack = 3;
+    int newSpeed= 3;
+
+    Enemy *enemy = EnemyFactory::createAttackSpeedEnemy();
+    ASSERT_EQ(enemy->getAttack(), newAttack);
+    ASSERT_EQ(enemy->getSpeed(), newSpeed);
+}
+
 
