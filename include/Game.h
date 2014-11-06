@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Game
+class Game  : public GameSubject
 {
     public:
 
@@ -23,8 +23,18 @@ class Game
         virtual ~Game();
         void update();
         void addEnemy(EnemyInterface* enemy);
+
+
+        void addObserver(GameObserver* o);
+        void removeObserver(GameObserver* o);
+
     protected:
     private:
+
+        std::vector<GameObserver *> observers;
+        int numOfObservers;
+
+        void notify(int type, int value);
 };
 
 #endif // GAME_H

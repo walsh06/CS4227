@@ -5,7 +5,7 @@ Player::Player()
     killCount = 0;
     points = 0;
     money = 0;
-    numOfObservers = 0;
+    health = 10;
 }
 
 Player::~Player()
@@ -28,41 +28,31 @@ int Player::getMoney()
 void Player::setPoints(int points)
 {
     this->points = points;
-    notify(GameEvent::TYPE_POINTS, points);
 }
 void Player::setKillCount(int kills)
 {
     this->killCount = kills;
-    notify(GameEvent::TYPE_KILLS, kills);
 }
+
+int Player::getHealth()
+{
+    return this->health;
+}
+void Player::setHealth(int health)
+{
+    this->health = health;
+}
+
+
 void Player::setMoney(int money)
 {
     this->money = money;
-    notify(GameEvent::TYPE_MONEY, money);
 }
 
-void Player::addObserver(GameObserver* o)
+void Player::update()
 {
-    observers.push_back(o);
-    numOfObservers++;
-}
-void Player::removeObserver(GameObserver* o)
-{
-    for(int i = 0; i < numOfObservers; i++)
-    {
-        if(observers[i] == o)
-        {
-            observers.erase(observers.begin() + i);
-            numOfObservers--;
-        }
+    if(this->health < 1){
+        delete this;
     }
 }
 
-void Player::notify(int type, int value)
-{
-    for(int i = 0; i < numOfObservers; i++)
-    {
-        GameEvent event(type, value);
-        observers[i]->update(event);
-    }
-}
