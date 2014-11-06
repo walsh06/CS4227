@@ -21,6 +21,10 @@ void Enemy::update()
 {
     //update the enemies each tick
     moveStrategy->move(posX, posY, speed);
+
+    if(this-> health < 1){
+        delete this;
+    }
 }
 
 
