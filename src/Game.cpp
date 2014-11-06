@@ -9,7 +9,7 @@ Game::Game()
 
 Game::~Game()
 {
-    //dtor
+    delete player;
 }
 
 void Game::update()

@@ -7,13 +7,14 @@ EnemyInterface()
     this->attack = 1;
     this->defense = 1;
     this->speed = 1;
-    moveStrategy = new EnemyHorizontal();
+    this->moveStrategy = new EnemyHorizontal();
 
 }
 
 Enemy::~Enemy()
 {
-    //dtor
+
+    delete this->moveStrategy;
 }
 
 
