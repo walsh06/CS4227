@@ -1,15 +1,28 @@
 #ifndef ENEMYFACTORY_H
 #define ENEMYFACTORY_H
 
-#include <RobotEnemy.h>
+
+#include "Enemy.h"
+#include "SpeedItem.h"
+#include "AttackItem.h"
+#include "DefenseItem.h"
+
+
+
 
 class EnemyFactory
 {
     public:
-        static RobotEnemy *createRobotEnemy();
-        static RobotEnemy *createRobotEnemyWithPower(int power);
-        static RobotEnemy *createRobotEnemyWithHealth(int health);
-        static RobotEnemy *createRobotEnemyWithHealthAndPower(int health, int power);
+        static Enemy *createEnemy();
+        static Enemy *createEnemyWithHealth(int health);
+
+        static Enemy *createSpeedEnemy();
+        static Enemy *createAttackEnemy();
+        static Enemy *createDefenseEnemy();
+        static Enemy *createSpeedDefenseEnemy();
+        static Enemy *createAttackDefenseEnemy();
+        static Enemy *createAttackSpeedEnemy();
+
     protected:
     private:
 };

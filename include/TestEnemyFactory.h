@@ -1,7 +1,7 @@
 #ifndef TESTENEMYFACTORY_H
 #define TESTENEMYFACTORY_H
 
-#include <EnemyFactory.h>
+#include "EnemyFactory.h"
 #include <gtest/gtest.h>
 
 
