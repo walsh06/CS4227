@@ -37,8 +37,9 @@
 		</Compiler>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
-		<Unit filename="include/AorLeftArrowButton.h" />
+		<Unit filename="include/AttackCommand.h" />
 		<Unit filename="include/Command.h" />
+		<Unit filename="include/DeviceButton.h" />
 		<Unit filename="include/EnemyFactory.h" />
 		<Unit filename="include/EnemyInterface.h" />
 		<Unit filename="include/GameEvent.h" />
@@ -49,14 +50,15 @@
 		<Unit filename="include/MoveRightCommand.h" />
 		<Unit filename="include/MoveUpCommand.h" />
 		<Unit filename="include/Player.h" />
-		<Unit filename="include/PlayerMovement.h" />
 		<Unit filename="include/RobotEnemy.h" />
 		<Unit filename="include/SoundSystem.h" />
 		<Unit filename="include/TestAchievementSystem.h" />
+		<Unit filename="include/TestCommand.h" />
 		<Unit filename="include/TestEnemyFactory.h" />
-		<Unit filename="include/WorUpArrowButton.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
+		<Unit filename="src/AttackCommand.cpp" />
+		<Unit filename="src/DeviceButton.cpp" />
 		<Unit filename="src/EnemyFactory.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/MoveDownCommand.cpp" />
@@ -64,12 +66,11 @@
 		<Unit filename="src/MoveRightCommand.cpp" />
 		<Unit filename="src/MoveUpCommand.cpp" />
 		<Unit filename="src/Player.cpp" />
-		<Unit filename="src/PlayerMovement.cpp" />
 		<Unit filename="src/RobotEnemy.cpp" />
 		<Unit filename="src/SoundSystem.cpp" />
 		<Unit filename="src/TestAchievementSystem.cpp" />
+		<Unit filename="src/TestCommand.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
-		<Unit filename="src/WorUpArrowButton.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
