@@ -12,9 +12,19 @@ class Player : public GameSubject
         int getPoints();
         int getKillCount();
         int getMoney();
+        int getXPosition();
+        int getYPosition();
         void setPoints(int points);
         void setKillCount(int kills);
         void setMoney(int money);
+        void setXPosition(int x);
+        void setYPosition(int y);
+
+        //Commands to move the player across the screen
+        void moveLeft();
+        void moveRight();
+        void moveDown();
+        void moveUp();
 
         void addObserver(GameObserver* o);
         void removeObserver(GameObserver* o);
@@ -24,7 +34,7 @@ class Player : public GameSubject
 
         std::vector<GameObserver *> observers;
         int numOfObservers;
-        int killCount, points, money;
+        int killCount, points, money, xPos, yPos;
 };
 
 #endif // PLAYER_H

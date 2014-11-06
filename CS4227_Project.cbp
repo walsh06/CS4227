@@ -42,6 +42,9 @@
 		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
+		<Unit filename="include/AttackCommand.h" />
+		<Unit filename="include/Command.h" />
+		<Unit filename="include/DeviceButton.h" />
 		<Unit filename="include/AttackItem.h" />
 		<Unit filename="include/DefenseItem.h" />
 		<Unit filename="include/Enemy.h" />
@@ -55,13 +58,21 @@
 		<Unit filename="include/EnemyWaveFactory.h" />
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
+		<Unit filename="include/GameSubject.h" />
+		<Unit filename="include/MoveDownCommand.h" />
+		<Unit filename="include/MoveLeftCommand.h" />
+		<Unit filename="include/MoveRightCommand.h" />
+		<Unit filename="include/MoveUpCommand.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/SoundSystem.h" />
 		<Unit filename="include/SpeedItem.h" />
 		<Unit filename="include/TestAchievementSystem.h" />
+		<Unit filename="include/TestCommand.h" />
 		<Unit filename="include/TestEnemyFactory.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
+		<Unit filename="src/AttackCommand.cpp" />
+		<Unit filename="src/DeviceButton.cpp" />
 		<Unit filename="src/AttackItem.cpp" />
 		<Unit filename="src/DefenseItem.cpp" />
 		<Unit filename="src/Enemy.cpp" />
@@ -72,15 +83,21 @@
 		<Unit filename="src/EnemyWave.cpp" />
 		<Unit filename="src/EnemyWaveFactory.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
+		<Unit filename="src/MoveDownCommand.cpp" />
+		<Unit filename="src/MoveLeftCommand.cpp" />
+		<Unit filename="src/MoveRightCommand.cpp" />
+		<Unit filename="src/MoveUpCommand.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/SoundSystem.cpp" />
 		<Unit filename="src/SpeedItem.cpp" />
 		<Unit filename="src/TestAchievementSystem.cpp" />
+		<Unit filename="src/TestCommand.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
