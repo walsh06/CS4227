@@ -13,15 +13,15 @@
 class EnemyFactory
 {
     public:
-        static Enemy *createEnemy();
-        static Enemy *createEnemyWithHealth(int health);
+        static Enemy *createEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createEnemyWithHealth(EnemyOrientation* moveStrategy,int health);
 
-        static Enemy *createSpeedEnemy();
-        static Enemy *createAttackEnemy();
-        static Enemy *createDefenseEnemy();
-        static Enemy *createSpeedDefenseEnemy();
-        static Enemy *createAttackDefenseEnemy();
-        static Enemy *createAttackSpeedEnemy();
+        static Enemy *createSpeedEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createAttackEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createDefenseEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createSpeedDefenseEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createAttackDefenseEnemy(EnemyOrientation* moveStrategy);
+        static Enemy *createAttackSpeedEnemy(EnemyOrientation* moveStrategy);
 
     protected:
     private:

@@ -20,6 +20,7 @@ class Enemy : public EnemyInterface
         virtual int getDefense()  ;
         virtual int getSpeed()  ;
         virtual void setHealth(int health)  ;
+        void setStrategy(EnemyOrientation* moveStrategy);
         void update();
 
     protected:

@@ -5,7 +5,7 @@
 class EnemyOrientation
 {
     public:
-        virtual void move(int &posX, int &posY, int speed) = 0;
+        virtual void moveDirection(int &posX, int &posY, int speed) = 0;
     protected:
     private:
 };

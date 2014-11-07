@@ -12,10 +12,10 @@ class EnemyWaveFactory
         /** Default destructor */
         virtual ~EnemyWaveFactory();
 
-        static EnemyWave* createBasicWave(int size);
-        static EnemyWave* createAttackWave(int size);
-        static EnemyWave* createDefenseWave(int size);
-        static EnemyWave* createSpeedWave(int size);
+        static EnemyWave* createBasicWave(EnemyOrientation* moveStrategy, int size);
+        static EnemyWave* createAttackWave(EnemyOrientation* moveStrategy, int size);
+        static EnemyWave* createDefenseWave(EnemyOrientation* moveStrategy, int size);
+        static EnemyWave* createSpeedWave(EnemyOrientation* moveStrategy, int size);
 
     protected:
     private:
