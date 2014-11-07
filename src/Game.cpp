@@ -42,6 +42,9 @@ void Game::update()
         }
 
         this->player->update();
+        //commands will be processed by client on thread
+        //depending on desired input device.
+
 
         usleep(30000);
 

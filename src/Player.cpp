@@ -6,6 +6,8 @@ Player::Player()
     points = 0;
     money = 0;
     health = 10;
+    xPos = 0;
+    yPos = 0;
 }
 
 Player::~Player()
@@ -25,6 +27,14 @@ int Player::getMoney()
 {
     return money;
 }
+int Player::getXPosition()
+{
+    return xPos;
+}
+int Player::getYPosition()
+{
+    return yPos;
+}
 void Player::setPoints(int points)
 {
     this->points = points;
@@ -38,11 +48,44 @@ int Player::getHealth()
 {
     return this->health;
 }
+
 void Player::setHealth(int health)
 {
     this->health = health;
 }
 
+void Player::setXPosition(int x)
+{
+    this->xPos = x;
+}
+void Player::setYPosition(int y)
+{
+    this->yPos = y;
+}
+
+//Allows the player to move left.
+void Player::moveLeft()
+{
+    this->xPos--;
+}
+
+//Allows the player to move right.
+void Player::moveRight()
+{
+    this->xPos++;
+}
+
+//Allows the player to move downwards.
+void Player::moveDown()
+{
+    this->yPos--;
+}
+
+//Allows the player to move upwards.
+void Player::moveUp()
+{
+    this->yPos++;
+}
 
 void Player::setMoney(int money)
 {

@@ -69,5 +69,3 @@ TEST(EnemyTest, SpeedAttackEnemyTest)
     ASSERT_EQ(enemy->getAttack(), newAttack);
     ASSERT_EQ(enemy->getSpeed(), newSpeed);
 }
-
-
