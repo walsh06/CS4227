@@ -4,7 +4,9 @@
 Game::Game()
 {
     this->numOfObservers = 0;
+    this->percentage = 0;
     this->player = new Player();
+    this->enemyCount = enemies.size();
 }
 
 Game::~Game()
@@ -14,20 +16,44 @@ Game::~Game()
 
 void Game::update()
 {
+    int timer = 0;
     while(true)
     {
         //Waiting for player update, being done by Killian?
         //this->player->update();
-
+        int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
         }
 
+        enemyCount = enemies.size();
+
+        if (enemyCount < 1)
+        {
+            notify(TYPE_POINTS, 10000 - timer);
+        }
+
+        if(enemyCount < oldEnemyCount)
+        {
+            int difference = oldEnemyCount - enemyCount;
+            notify(TYPE_KILLS,(difference));
+            moneyDrop(difference);
+        }
+
         this->player->update();
 
-        usleep(3000);
+        usleep(30000);
+
+        timer += 1 ;
     }
+}
+
+void Game::moneyDrop(int times)
+{
+    for(int i = 0 ; i < times ; i++)
+        if(rand() % 100 < percentage)
+            notify(TYPE_MONEY, 10);
 }
 
 void Game::addEnemy(EnemyInterface* enemy)
@@ -59,4 +85,14 @@ void Game::notify(int type, int value)
         GameEvent event(type, value);
         observers[i]->update(event);
     }
+}
+
+int Game::getPercentage()
+{
+    return this->percentage;
+}
+
+void Game::setPercentage(int percentage)
+{
+    this->percentage = percentage;
 }

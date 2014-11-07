@@ -17,6 +17,11 @@ void EnemyWave::update()
     {
         wave[i]->update();
     }
+
+    if (waveSize < 1)
+    {
+        delete this;
+    }
 }
 
 void EnemyWave::addEnemy(EnemyInterface* enemy)
