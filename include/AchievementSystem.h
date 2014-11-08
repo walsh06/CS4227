@@ -5,15 +5,18 @@
 #include "Achievement.h"
 #include <vector>
 #include "GameEvent.h"
+#include "AchievementSystemInterace.h"
 
 
-class AchievementSystem : public GameObserver
+class AchievementSystem : public AchievementSystemInterace
 {
     public:
         AchievementSystem();
         virtual ~AchievementSystem();
 
         void update(GameEvent event);
+        void addAchievement(Achievement* achievement);
+        void removeAchievement(Achievement* achievement);
 
         int getNumUnlocked();
     protected:
