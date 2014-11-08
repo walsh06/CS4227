@@ -7,7 +7,10 @@ EnemyWave::EnemyWave(int waveSize)
 
 EnemyWave::~EnemyWave()
 {
-    //dtor
+    for(int i =0; i < waveSize; i++)
+    {
+        delete wave[i];
+    }
 }
 
 void EnemyWave::update()
