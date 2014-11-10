@@ -42,6 +42,7 @@
 		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
+		<Unit filename="include/AchievementSystemInterace.h" />
 		<Unit filename="include/AttackCommand.h" />
 		<Unit filename="include/AttackItem.h" />
 		<Unit filename="include/Command.h" />

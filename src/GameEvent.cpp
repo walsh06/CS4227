@@ -8,7 +8,7 @@ GameEvent::GameEvent(int type, int value)
 
 GameEvent::~GameEvent()
 {
-    //dtor
+
 }
 
 int GameEvent::getType()

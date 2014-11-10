@@ -5,26 +5,11 @@ TEST(AchievementTest, TestKillAchievements)
 /*
     AchievementSystem* achievements = new AchievementSystem();
 
-    Player* testPlayer = new Player();
+    Game testGame();
 
-    testPlayer->addObserver(achievements);
+    testGame.addObserver(achievements);
 
-    testPlayer->setKillCount(1);
-    ASSERT_EQ(achievements->getNumUnlocked(), 0);
-
-    testPlayer->setKillCount(5);
-    ASSERT_EQ(achievements->getNumUnlocked(), 1);
-
-    testPlayer->setKillCount(9);
-    ASSERT_EQ(achievements->getNumUnlocked(), 1);
-
-    testPlayer->setKillCount(10);
-    ASSERT_EQ(achievements->getNumUnlocked(), 2);
-
-    testPlayer->setKillCount(50);
-    ASSERT_EQ(achievements->getNumUnlocked(), 3);
-
-    delete testPlayer;
+    delete testGame;
     delete achievements;
     */
 }
