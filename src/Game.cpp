@@ -83,6 +83,7 @@ void Game::removeObserver(GameObserver* o)
 
 void Game::notify(int type, int value)
 {
+    #pragma omp parallel for
     for(int i = 0; i < numOfObservers; i++)
     {
         GameEvent event(type, value);
