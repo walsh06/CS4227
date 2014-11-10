@@ -19,7 +19,7 @@ bool Achievement::updateProgress(int type, int newValue)
 {
     if(!unlocked && type == this->type)
     {
-        currentValue = newValue;
+        currentValue += newValue;
         //std::cout<< currentValue << " " << requiredValue << std::endl;
         return currentValue >= requiredValue;
     }

@@ -3,7 +3,7 @@
 #include <vector>
 #include "GameObserver.h"
 #include "GameSubject.h"
-class Player : public GameSubject
+class Player
 {
     public:
         Player();
@@ -12,6 +12,9 @@ class Player : public GameSubject
         int getPoints();
         int getKillCount();
         int getMoney();
+        int getHealth();
+        void setHealth(int health);
+        void update();
         int getXPosition();
         int getYPosition();
         void setPoints(int points);
@@ -26,14 +29,9 @@ class Player : public GameSubject
         void moveDown();
         void moveUp();
 
-        void addObserver(GameObserver* o);
-        void removeObserver(GameObserver* o);
     protected:
-        void notify(int type, int value);
     private:
-
-        std::vector<GameObserver *> observers;
-        int numOfObservers;
+        int health;
         int killCount, points, money, xPos, yPos;
 };
 

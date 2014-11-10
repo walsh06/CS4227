@@ -7,20 +7,25 @@ EnemyInterface()
     this->attack = 1;
     this->defense = 1;
     this->speed = 1;
-    moveStrategy = new EnemyHorizontal();
+    this->moveStrategy = new EnemyHorizontal();
 
 }
 
 Enemy::~Enemy()
 {
-    //dtor
+
+    delete this->moveStrategy;
 }
 
 
 void Enemy::update()
 {
     //update the enemies each tick
-    moveStrategy->moveDirection(posX, posY, speed);
+    moveStrategy->move(posX, posY, speed);
+
+    if(this-> health < 1){
+        delete this;
+    }
 }
 
 
