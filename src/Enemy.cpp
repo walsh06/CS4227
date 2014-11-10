@@ -53,3 +53,8 @@ int Enemy::getSpeed()
 {
     return this->speed;
 }
+
+void Enemy::setStrategy(EnemyOrientation* moveStrategy)
+{
+    this->moveStrategy = moveStrategy;
+}
