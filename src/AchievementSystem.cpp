@@ -20,9 +20,9 @@ AchievementSystem::AchievementSystem()
 
 AchievementSystem::~AchievementSystem()
 {
-    for(int i =0; i < numOfAchievements; i++)
+    while(achievements.size() != 0)
     {
-        delete achievements[i];
+        delete achievements[0];
     }
 }
 
