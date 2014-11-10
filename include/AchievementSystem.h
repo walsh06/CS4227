@@ -22,6 +22,7 @@ class AchievementSystem : public AchievementSystemInterace
     protected:
     private:
         std::vector<Achievement*> achievements;
+        std::vector<Achievement*> unlockedAchievements;
         int numOfAchievements;
         int numUnlocked;
 };

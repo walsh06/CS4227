@@ -5,7 +5,7 @@ AchievementSystem::AchievementSystem()
     numOfAchievements = 0;
     numUnlocked = 0;
 
-    addAchievement(new Achievement("10 Kills", GameEvent::TYPE_KILLS, 10));
+    addAchievement(new Achievement("10 Kills", GameEvent::TYPE_KILLS, 1));
     addAchievement(new Achievement("50 Kills", GameEvent::TYPE_KILLS, 50));
     addAchievement(new Achievement("100 Kills", GameEvent::TYPE_KILLS, 100));
 
@@ -13,16 +13,16 @@ AchievementSystem::AchievementSystem()
     addAchievement(new Achievement("50 points", GameEvent::TYPE_POINTS, 50));
     addAchievement(new Achievement("100 points", GameEvent::TYPE_POINTS, 100));
 
-    addAchievement(new Achievement("10 gold", GameEvent::TYPE_MONEY, 10));
-    addAchievement(new Achievement("50 gold", GameEvent::TYPE_MONEY, 50));
-    addAchievement(new Achievement("100 gold", GameEvent::TYPE_MONEY, 100));
+    addAchievement(new Achievement("10 gold", GameEvent::TYPE_MONEY, 20));
+    addAchievement(new Achievement("50 gold", GameEvent::TYPE_MONEY, 500));
+    addAchievement(new Achievement("100 gold", GameEvent::TYPE_MONEY, 1000));
 }
 
 AchievementSystem::~AchievementSystem()
 {
-    while(achievements.size() != 0)
+    for(int i = 0; i < numOfAchievements; i++)
     {
-        delete achievements[0];
+        delete achievements[i];
     }
 }
 
@@ -53,6 +53,8 @@ void AchievementSystem::update(GameEvent event)
         {
             achievements[i]->unlock();
             numUnlocked++;
+            removeAchievement((achievements[i]));
+            unlockedAchievements.push_back(achievements[i]);
         }
     }
 }

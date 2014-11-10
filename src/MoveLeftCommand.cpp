@@ -10,8 +10,6 @@ MoveLeftCommand::MoveLeftCommand(Player* player)
 //Destructor
 MoveLeftCommand::~MoveLeftCommand()
 {
-    this->player = NULL;
-    delete player;
 
 }
 
