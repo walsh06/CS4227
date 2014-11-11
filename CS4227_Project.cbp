@@ -60,6 +60,7 @@
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
+		<Unit filename="include/GameSubject.h" />
 		<Unit filename="include/MoveDownCommand.h" />
 		<Unit filename="include/MoveLeftCommand.h" />
 		<Unit filename="include/MoveRightCommand.h" />

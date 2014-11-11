@@ -1,6 +1,5 @@
 #include "TestAchievementSystem.h"
 #include "GameEvent.h"
-#include <iostream>
 
 TEST(AchievementTest, TestKillAchievements)
 {
