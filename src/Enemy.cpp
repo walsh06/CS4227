@@ -9,6 +9,8 @@ EnemyInterface()
     this->speed = 1;
     this->moveStrategy = new EnemyHorizontal();
 
+    posX = 10;
+    posY = 10;
 }
 
 Enemy::~Enemy()
@@ -57,4 +59,14 @@ int Enemy::getSpeed()
 void Enemy::setStrategy(EnemyOrientation* moveStrategy)
 {
     this->moveStrategy = moveStrategy;
+}
+
+int Enemy::getPosX()
+{
+    return this->posX;
+}
+
+int Enemy::getPosY()
+{
+    return this->posY;
 }

@@ -1,5 +1,4 @@
 #include "TestCommand.h"
-
 TestCommand::TestCommand()
 {
 }
