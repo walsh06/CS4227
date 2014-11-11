@@ -21,6 +21,7 @@ class Player : public GameSubject
         void setYPosition(int y);
 
         //Commands to move the player across the screen
+        void attack();
         void moveLeft();
         void moveRight();
         void moveDown();
