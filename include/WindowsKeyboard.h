@@ -1,9 +1,9 @@
 #ifndef WINDOWSKEYBOARD_H
 #define WINDOWSKEYBOARD_H
 
-#include <KeyboardBridgeInterface.h>
+#include "KeyboardBridgeInterface.h"
 
-#ifdef WINDOWS
+#ifdef _WIN32
 #include <iostream>
 #include <windows.h>
 #include <conio.h>

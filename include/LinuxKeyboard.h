@@ -1,7 +1,7 @@
 #ifndef LINUXKEYBOARD_H
 #define LINUXKEYBOARD_H
 
-#include <KeyboardBridgeInterface.h>
+#include "KeyboardBridgeInterface.h"
 
 #ifdef __linux__
 #include <termios.h>
