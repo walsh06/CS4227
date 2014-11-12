@@ -1,8 +1,6 @@
 #include "GameView.h"
-//#include <windows.h>
 #include <iostream>
 #include <string>
-//#include <conio.h>
 
 #define ATTACK 1
 #define LEFT 2
@@ -22,6 +20,21 @@ GameView::GameView()
 GameView::~GameView()
 {
     //dtor
+}
+
+
+/* reads from keypress, doesn't echo */
+int GameView::getch(void)
+{
+    struct termios oldattr, newattr;
+    int ch;
+    tcgetattr( STDIN_FILENO, &oldattr );
+    newattr = oldattr;
+    newattr.c_lflag &= ~( ICANON | ECHO );
+    tcsetattr( STDIN_FILENO, TCSANOW, &newattr );
+    ch = getchar();
+    tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
+    return ch;
 }
 
 int GameView::checkButtonState()

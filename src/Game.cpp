@@ -78,6 +78,7 @@ void Game::update()
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
+            cout << "HERE" << endl;
             enemy->draw(gameView);
         }
 

@@ -1,8 +1,6 @@
 //#include <gtest/gtest.h>
 #include <iostream>
-#include <windows.h>
 #include "Player.h"
-#include "GameController.h"
 #include "GameView.h"
 #include "DeviceButton.h"
 #include "Game.h"
@@ -17,6 +15,8 @@ int main(int argc, char** argv)
     //return RUN_ALL_TESTS();
 
     Game* game = new Game();
+    Enemy * enemy = EnemyFactory::createDefenseEnemy(new EnemyHorizontal());
+    game->addEnemy(enemy);
     game->update();
 
 }
