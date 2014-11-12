@@ -10,7 +10,7 @@ class GameView
         GameView();
         virtual ~GameView();
         int checkButtonState();
-        void setXY(int x, int y);
+        void draw(int x, int y);
     protected:
     private:
 };

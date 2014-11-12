@@ -71,13 +71,14 @@ void Game::update()
             running = false;
         }
         type = NONE;
-        gameView->setXY(player->getXPosition(),player->getYPosition());
+        gameView->draw(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
         //this->player->update();
         int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
+            enemy->draw(gameView);
         }
 
         enemyCount = enemies.size();
