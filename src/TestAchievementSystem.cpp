@@ -1,6 +1,7 @@
 #include "TestAchievementSystem.h"
 #include "GameEvent.h"
 
+///Test if the kill achievements unlock
 TEST(AchievementTest, TestKillAchievements)
 {
     AchievementSystem achievements;
@@ -24,6 +25,7 @@ TEST(AchievementTest, TestKillAchievements)
     ASSERT_EQ(achievements.getNumUnlocked(), 3);
 }
 
+///Test if the point achievements unlock
 TEST(AchievementTest, TestPointAchievements)
 {
 
@@ -48,6 +50,7 @@ TEST(AchievementTest, TestPointAchievements)
     ASSERT_EQ(achievements.getNumUnlocked(), 3);
 }
 
+///Test if the money achievements unlock
 TEST(AchievementTest, TestMoneyAchievements)
 {
     AchievementSystem achievements;

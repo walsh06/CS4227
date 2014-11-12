@@ -15,12 +15,12 @@ Achievement::~Achievement()
     //dtor
 }
 
+///Update the achievement progress
 bool Achievement::updateProgress(int type, int newValue)
 {
     if(!unlocked && type == this->type)
     {
         currentValue += newValue;
-        //std::cout<< currentValue << " " << requiredValue << std::endl;
         return currentValue >= requiredValue;
     }
     else
@@ -29,6 +29,7 @@ bool Achievement::updateProgress(int type, int newValue)
     }
 }
 
+///unlock the achievement
  void Achievement::unlock()
 {
     std::cout << "Achievement Unlocked!! "<< name << std::endl;
