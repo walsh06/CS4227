@@ -1,20 +1,20 @@
-/*#ifndef TESTENEMYFACTORY_H
+#ifndef TESTENEMYFACTORY_H
 #define TESTENEMYFACTORY_H
 
 #include "EnemyFactory.h"
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
 
 class TestEnemyFactory : public EnemyFactory
 {
     public:
-        /** Default constructor
+        /** Default constructor*/
         TestEnemyFactory();
-        /** Default destructor
+        /** Default destructor*/
         virtual ~TestEnemyFactory();
     protected:
     private:
 };
 
 #endif // TESTENEMYFACTORY_H
-*/
+

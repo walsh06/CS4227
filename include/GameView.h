@@ -13,8 +13,6 @@ class GameView
         void setXY(int x, int y);
     protected:
     private:
-        int posX;
-        int posY;
 };
 
 #endif // GAMEVIEW_H

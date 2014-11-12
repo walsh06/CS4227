@@ -1,7 +1,7 @@
 #ifndef TESTACHIEVEMENTSYSTEM_H
 #define TESTACHIEVEMENTSYSTEM_H
 
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 #include "Player.h"
 #include "AchievementSystem.h"
 

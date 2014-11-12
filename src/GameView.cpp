@@ -4,7 +4,7 @@
 #include <string>
 #include <conio.h>
 
-#define SPACE 1
+#define ATTACK 1
 #define LEFT 2
 #define RIGHT 3
 #define UP 4
@@ -16,8 +16,7 @@ using namespace std;
 
 GameView::GameView()
 {
-    posX = 0;
-    posY = 0;
+    //ctor
 }
 
 GameView::~GameView()
@@ -50,7 +49,7 @@ int GameView::checkButtonState()
     }
     if(c == ' ')
     {
-        return SPACE;
+        return ATTACK;
     }
 
     return NONE;
@@ -58,10 +57,8 @@ int GameView::checkButtonState()
 
 void GameView::setXY(int x, int y)
 {
-        posX = x;
-        posY = y;
         cout<<"X = ";
-        cout<<posX<<endl;
+        cout<<x<<endl;
         cout<<"Y = ";
-        cout<<posY<<endl;
+        cout<<y<<endl;
 }

@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <cstdlib>
 
-#define SPACE 1
+#define ATTACK 1
 #define LEFT 2
 #define RIGHT 3
 #define UP 4
@@ -50,7 +50,7 @@ void Game::update()
     {
         type = gameView->checkButtonState();
 
-        if(type == SPACE){
+        if(type == ATTACK){
             deviceAt->press();
         }
         if(type == UP){
