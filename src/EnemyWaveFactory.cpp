@@ -1,7 +1,9 @@
 #include "EnemyWaveFactory.h"
 
 
-EnemyWave* EnemyWaveFactory::createBasicWave(EnemyOrientation* moveStrategy, int size)
+/// Creates Wave of Basic Enemies (calls EnemyFactory) of size size
+/// With the movement strategy moveStrategy
+EnemyInterface* EnemyWaveFactory::createBasicWave(EnemyOrientation* moveStrategy, int size)
 {
     EnemyWave *wave = new EnemyWave(size);
     for(int i = 0; i < size; i++)
@@ -12,7 +14,9 @@ EnemyWave* EnemyWaveFactory::createBasicWave(EnemyOrientation* moveStrategy, int
 
 }
 
-EnemyWave* EnemyWaveFactory::createAttackWave(EnemyOrientation* moveStrategy, int size)
+/// Creates Wave of Attack Enemies (calls EnemyFactory) of size size
+/// With the movement strategy moveStrategy
+EnemyInterface* EnemyWaveFactory::createAttackWave(EnemyOrientation* moveStrategy, int size)
 {
     EnemyWave *wave = new EnemyWave(size);
     for(int i = 0; i < size; i++)
@@ -22,7 +26,9 @@ EnemyWave* EnemyWaveFactory::createAttackWave(EnemyOrientation* moveStrategy, in
     return wave;
 }
 
-EnemyWave* EnemyWaveFactory::createDefenseWave(EnemyOrientation* moveStrategy, int size)
+/// Creates Wave of Defense Enemies (calls EnemyFactory) of size size
+/// With the movement strategy moveStrategy
+EnemyInterface* EnemyWaveFactory::createDefenseWave(EnemyOrientation* moveStrategy, int size)
 {
     EnemyWave *wave = new EnemyWave(size);
     for(int i = 0; i < size; i++)
@@ -32,7 +38,9 @@ EnemyWave* EnemyWaveFactory::createDefenseWave(EnemyOrientation* moveStrategy, i
     return wave;
 }
 
-EnemyWave* EnemyWaveFactory::createSpeedWave(EnemyOrientation* moveStrategy, int size)
+/// Creates Wave of Speed Enemies (calls EnemyFactory) of size size
+/// With the movement strategy moveStrategy
+EnemyInterface* EnemyWaveFactory::createSpeedWave(EnemyOrientation* moveStrategy, int size)
 {
     EnemyWave *wave = new EnemyWave(size);
     for(int i = 0; i < size; i++)
