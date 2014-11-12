@@ -1,10 +1,21 @@
 #ifndef GAMEVIEW_H
 #define GAMEVIEW_H
-#include "string"
-#include <termios.h>
-#include <unistd.h>
-#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <KeyboardBridgeInterface.h>
 
+#include <WindowsKeyboard.h>
+
+
+
+#ifdef _WIN32
+#include <WindowsKeyboard.h>
+#endif // _WIN32
+#ifdef __linux__
+
+#include <LinuxKeyboard.h>
+
+#endif // linux
 
 using namespace std;
 
@@ -16,8 +27,8 @@ class GameView
         int checkButtonState();
         void draw(int x, int y);
 
-        //Taken from http://zobayer.blogspot.ie/2010/12/getch-getche-in-gccg.html
-        int getch(void);
+        KeyboardBridgeInterface* keyboard;
+
 
     protected:
     private:

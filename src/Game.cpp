@@ -73,13 +73,12 @@ void Game::update()
         type = NONE;
         gameView->draw(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
-        //this->player->update();
+        this->player->update();
         int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
-            cout << "HERE" << endl;
-            enemy->draw(gameView);
+            //enemy->draw(gameView);
         }
 
         enemyCount = enemies.size();
@@ -101,7 +100,7 @@ void Game::update()
         //depending on desired input device.
 
 
-        usleep(1000);
+        usleep(30000);
 
         timer += 1 ;
     }

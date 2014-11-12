@@ -1,6 +1,4 @@
 #include "GameView.h"
-#include <iostream>
-#include <string>
 
 #define ATTACK 1
 #define LEFT 2
@@ -14,7 +12,13 @@ using namespace std;
 
 GameView::GameView()
 {
-    //ctor
+    #ifdef _WIN32
+        keyboard  = new WindowsKeyboard();
+    #endif // _WIN32
+
+    #ifdef __linux__
+        keyboard = new LinuxKeyboard();
+    #endif // __linux__
 }
 
 GameView::~GameView()
@@ -23,23 +27,11 @@ GameView::~GameView()
 }
 
 
-/* reads from keypress, doesn't echo */
-int GameView::getch(void)
-{
-    struct termios oldattr, newattr;
-    int ch;
-    tcgetattr( STDIN_FILENO, &oldattr );
-    newattr = oldattr;
-    newattr.c_lflag &= ~( ICANON | ECHO );
-    tcsetattr( STDIN_FILENO, TCSANOW, &newattr );
-    ch = getchar();
-    tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
-    return ch;
-}
+
 
 int GameView::checkButtonState()
 {
-    char c = getch();
+    char c = keyboard->getKey();
     if(c == 's' || c =='S')
     {
         return DOWN;
