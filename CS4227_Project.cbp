@@ -36,6 +36,10 @@
 			<Add option="-lpthread" />
 			<Add directory="/usr/include/gtest" />
 		</Compiler>
+		<Linker>
+			<Add library="/usr/src/gtest/libgtest.a" />
+			<Add directory="/usr/include/gtest" />
+		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
 		<Unit filename="include/AchievementSystemInterace.h" />
