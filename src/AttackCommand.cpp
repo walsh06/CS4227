@@ -1,5 +1,6 @@
 #include "AttackCommand.h"
 #include "Player.h"
+#include <iostream>
 
 AttackCommand::AttackCommand(Player* player)
 {
@@ -16,6 +17,7 @@ AttackCommand::~AttackCommand()
 //Command allowing the player to move downwards.
 void AttackCommand::execute()
 {
-    player->moveDown();
+    player->attack();
+    //std::cout<<"got to here"<<std::endl;
 }
 

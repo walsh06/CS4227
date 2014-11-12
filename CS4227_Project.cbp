@@ -42,6 +42,7 @@
 		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
+		<Unit filename="include/AchievementSystemInterace.h" />
 		<Unit filename="include/AttackCommand.h" />
 		<Unit filename="include/AttackItem.h" />
 		<Unit filename="include/Command.h" />
@@ -61,6 +62,9 @@
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
 		<Unit filename="include/GameView.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/GameEvent.h" />
+		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/MoveDownCommand.h" />
 		<Unit filename="include/MoveLeftCommand.h" />
 		<Unit filename="include/MoveRightCommand.h" />
@@ -85,6 +89,7 @@
 		<Unit filename="src/EnemyWave.cpp" />
 		<Unit filename="src/EnemyWaveFactory.cpp" />
 		<Unit filename="src/GameController.cpp" />
+		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/GameView.cpp" />
 		<Unit filename="src/MoveDownCommand.cpp" />
@@ -101,7 +106,6 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
-			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
