@@ -46,7 +46,6 @@ void EnemyWave::removeEnemy(EnemyInterface* enemy)
     }
 }
 
-
 EnemyInterface* EnemyWave::getEnemy(int enemyIndex)
 {
     return wave[enemyIndex];
