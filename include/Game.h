@@ -6,6 +6,13 @@
 #include "EnemyWave.h"
 #include "EnemyFactory.h"
 #include "Player.h"
+#include "GameView.h"
+#include "DeviceButton.h"
+#include "MoveUpCommand.h"
+#include "MoveDownCommand.h"
+#include "MoveLeftCommand.h"
+#include "MoveRightCommand.h"
+#include "AttackCommand.h"
 #include <unistd.h>
 #include <iostream>
 
@@ -32,6 +39,17 @@ class Game  : public GameSubject
 
     protected:
     private:
+        GameView* gameView;
+        DeviceButton* deviceAt;
+        DeviceButton* deviceL;
+        DeviceButton* deviceR;
+        DeviceButton* deviceU;
+        DeviceButton* deviceD;
+        MoveUpCommand* moveUp;
+        MoveDownCommand* moveDown;
+        MoveLeftCommand* moveLeft;
+        MoveRightCommand* moveRight;
+        AttackCommand* attack;
         void moneyDrop(int times);
         std::vector<GameObserver *> observers;
         int numOfObservers;

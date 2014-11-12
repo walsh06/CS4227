@@ -1,5 +1,13 @@
 #include "Game.h"
+#include <cstdlib>
 
+#define SPACE 1
+#define LEFT 2
+#define RIGHT 3
+#define UP 4
+#define DOWN 5
+#define QUIT 6
+#define NONE 0
 
 Game::Game()
 {
@@ -7,18 +15,63 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+    this->moveUp = new MoveUpCommand(player);
+    this->moveDown = new MoveDownCommand(player);
+    this->moveLeft = new MoveLeftCommand(player);
+    this->moveRight = new MoveRightCommand(player);
+    this->attack = new AttackCommand(player);
 }
 
 Game::~Game()
 {
     delete player;
+    delete gameView;
+    delete moveDown;
+    delete moveUp;
+    delete moveRight;
+    delete moveLeft;
+    delete attack;
 }
 
 void Game::update()
 {
+    bool running = true;
+    this->gameView = new GameView();
+    int type;
+    deviceAt = new DeviceButton(attack);
+    deviceU = new DeviceButton(moveUp);
+    deviceL = new DeviceButton(moveLeft);
+    deviceD = new DeviceButton(moveDown);
+    deviceR = new DeviceButton(moveRight);
+    //DeviceButton* device = new DeviceButton();
+    //GameController* gc = new GameController(gw,p);
     int timer = 0;
-    while(true)
+    while(running)
     {
+        type = gameView->checkButtonState();
+
+        if(type == SPACE){
+            deviceAt->press();
+        }
+        if(type == UP){
+            deviceU->press();
+        }
+        if(type == DOWN){
+            deviceD->press();
+        }
+        if(type == LEFT){
+            deviceL->press();
+        }
+        if(type == RIGHT){
+            deviceR->press();
+        }
+        if(type == QUIT)
+        {
+            std::cout<<"Exiting game"<<std::endl;
+            running = false;
+        }
+        type = NONE;
+        gameView->setXY(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
         //this->player->update();
         int oldEnemyCount = enemyCount;
@@ -46,7 +99,7 @@ void Game::update()
         //depending on desired input device.
 
 
-        usleep(30000);
+        usleep(1000);
 
         timer += 1 ;
     }

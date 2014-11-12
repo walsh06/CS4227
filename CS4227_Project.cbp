@@ -36,10 +36,6 @@
 			<Add option="-lpthread" />
 			<Add directory="/usr/include/gtest" />
 		</Compiler>
-		<Linker>
-			<Add library="/usr/src/gtest/libgtest.a" />
-			<Add directory="/usr/include/gtest" />
-		</Linker>
 		<Unit filename="include/Achievement.h" />
 		<Unit filename="include/AchievementSystem.h" />
 		<Unit filename="include/AchievementSystemInterace.h" />
@@ -57,15 +53,11 @@
 		<Unit filename="include/EnemyVertical.h" />
 		<Unit filename="include/EnemyWave.h" />
 		<Unit filename="include/EnemyWaveFactory.h" />
-		<Unit filename="include/GameController.h" />
-		<Unit filename="include/GameEvent.h" />
-		<Unit filename="include/GameObserver.h" />
-		<Unit filename="include/GameSubject.h" />
-		<Unit filename="include/GameView.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
+		<Unit filename="include/GameView.h" />
 		<Unit filename="include/MoveDownCommand.h" />
 		<Unit filename="include/MoveLeftCommand.h" />
 		<Unit filename="include/MoveRightCommand.h" />
@@ -89,7 +81,6 @@
 		<Unit filename="src/EnemyVertical.cpp" />
 		<Unit filename="src/EnemyWave.cpp" />
 		<Unit filename="src/EnemyWaveFactory.cpp" />
-		<Unit filename="src/GameController.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/GameView.cpp" />
@@ -107,6 +98,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

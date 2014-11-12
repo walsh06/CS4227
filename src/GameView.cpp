@@ -9,6 +9,7 @@
 #define RIGHT 3
 #define UP 4
 #define DOWN 5
+#define QUIT 6
 #define NONE 0
 
 using namespace std;
@@ -42,6 +43,10 @@ int GameView::checkButtonState()
     if(c == 'D' || c =='d')
     {
         return RIGHT;
+    }
+    if(c == 'q' || c =='Q')
+    {
+        return QUIT;
     }
     if(c == ' ')
     {

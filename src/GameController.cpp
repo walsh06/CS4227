@@ -30,7 +30,6 @@ GameController::GameController(GameView* gameView, Player* player)
 
 GameController::~GameController()
 {
-    delete player;
     delete gameView;
     delete moveDown;
     delete moveUp;
@@ -48,30 +47,7 @@ void GameController::runGame()
     deviceD = new DeviceButton(moveDown);
     deviceR = new DeviceButton(moveRight);
     while(1){
-        type = gameView->checkButtonState();
-        //cout<<buttonPressed<<endl;
-        if(type == SPACE){
-            //cout<<"SPACE"<<endl;
-            deviceAt->press();
-        }
-        if(type == UP){
-            //cout<<"UP"<<endl;
-            deviceU->press();
-        }
-        if(type == DOWN){
-            //cout<<"DOWN"<<endl;
-            deviceD->press();
-        }
-        if(type == LEFT){
-            //cout<<"LEFT"<<endl;
-            deviceL->press();
-        }
-        if(type == RIGHT){
-            //cout<<"RIGHT"<<endl;
-            deviceR->press();
-        }
-        type = NONE;
-        gameView->setXY(player->getXPosition(),player->getYPosition());
+
         Sleep(100);//sleepFor; // loop will only start again after sleepFor has timed out.
         //vector<int> position = {player->getXPosition(),player->getYPosition()};
         //return position;

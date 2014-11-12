@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+//#include <gtest/gtest.h>
 #include <iostream>
 #include <windows.h>
 #include "Player.h"
@@ -13,10 +13,10 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    //testing::InitGoogleTest(&argc, argv);
+    //return RUN_ALL_TESTS();
 
-    //Game* game = new Game();
-    //game->update();
+    Game* game = new Game();
+    game->update();
 
 }
