@@ -1,41 +1,6 @@
 #include "TestCommand.h"
-
-#include <iostream>
 TestCommand::TestCommand()
 {
-    ///default set to r as error when left blank.
-    //char input = 'r';
-
-    //Creating the player movement.
-    //Player* pMove = new Player();
-
-  /*  MoveLeftCommand* moveLeft = new MoveLeftCommand(pMove);
-    DeviceButton* ifApressed = new DeviceButton(moveLeft);
-
-    MoveUpCommand* moveUp = new MoveUpCommand(pMove);
-    DeviceButton* ifWpressed = new DeviceButton(moveUp);
-
-    MoveRightCommand* moveRight = new MoveRightCommand(pMove);
-    DeviceButton* ifDpressed = new DeviceButton(moveRight);
-
-    MoveDownCommand* moveDown = new MoveDownCommand(pMove);
-    DeviceButton* ifSpressed = new DeviceButton(moveDown);
-
-    while(true){
-        cout<< "Move left, right, up or down with a,d,w,s respectively. q to quit"<<endl;
-        cin>>input;
-        if(input == 'a' or input == 'A'){
-            ifApressed->press();
-        }else if(input == 'w' or input == 'W'){
-            ifWpressed->press();
-        }else if(input == 'D' or input == 'd'){
-            ifDpressed->press();
-        }else  if(input == 's' or input == 's'){
-            ifSpressed->press();
-        }else  if(input == 'q' or input == 'Q'){
-            cout<<"Closing.....not";
-        }
-    }*/
 }
 
 TestCommand::~TestCommand()
@@ -79,13 +44,9 @@ TEST(CommandTest, TestMoveKeys)
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
 
-    delete moveDown;
-    delete moveUp;
-    delete moveLeft;
-    delete moveRight;
     delete testPlayer;
 }
-/*
+
 TEST(CommandTest, TestMoveSequence)
 {
     Player* testPlayer = new Player();
@@ -102,39 +63,26 @@ TEST(CommandTest, TestMoveSequence)
     MoveDownCommand* moveDown = new MoveDownCommand(testPlayer);
     DeviceButton downPressed(moveDown);
 
-    std::cout << "1" << std::endl;
     //test initial state of the player
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
-    std::cout << "2" << std::endl;
+
     rightPressed.press();
-    std::cout << "4" << testPlayer->getYPosition() << std::endl;
     upPressed.press();
-    std::cout << "4" << testPlayer->getYPosition() << std::endl;
     upPressed.press();
-    std::cout << "4" << testPlayer->getYPosition() << std::endl;
     rightPressed.press();
-    std::cout << "4" << testPlayer->getYPosition() << std::endl;
     upPressed.press();
-    std::cout << "3" << std::endl;
     ASSERT_EQ(testPlayer->getXPosition(), 2);
-    std::cout << "4" << testPlayer->getYPosition() << std::endl;
-    ASSERT_EQ(testPlayer->getYPosition(), -3);
+    ASSERT_EQ(testPlayer->getYPosition(), 3);
 
     rightPressed.press();
     downPressed.press();
     leftPressed.press();
     downPressed.press();
     leftPressed.press();
-std::cout << "5" << std::endl;
     ASSERT_EQ(testPlayer->getXPosition(), 1);
     ASSERT_EQ(testPlayer->getYPosition(), 1);
-std::cout << "6" << std::endl;
 
-    delete moveDown;
-    delete moveUp;
-    delete moveLeft;
-    delete moveRight;
     delete testPlayer;
 }
-*/
+

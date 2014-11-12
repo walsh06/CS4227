@@ -10,8 +10,7 @@ MoveDownCommand::MoveDownCommand(Player* player)
 //Destructor
 MoveDownCommand::~MoveDownCommand()
 {
-    this->player = NULL;
-    delete player;
+
 }
 
 //Command allowing the player to move downwards.

@@ -10,8 +10,6 @@ MoveUpCommand::MoveUpCommand(Player* player)
 //Destructor
 MoveUpCommand::~MoveUpCommand()
 {
-    this->player = NULL;
-    delete player;
 }
 
 //Command allowing the player to move upwards.

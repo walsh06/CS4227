@@ -10,8 +10,6 @@ MoveRightCommand::MoveRightCommand(Player* player)
 //Destructor
 MoveRightCommand::~MoveRightCommand()
 {
-    this->player = NULL;
-    delete player;
 }
 
 //Command allowing the player to move right.

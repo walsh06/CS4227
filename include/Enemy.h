@@ -23,6 +23,9 @@ class Enemy : public EnemyInterface
         void setStrategy(EnemyOrientation* moveStrategy);
         void update();
 
+        int getPosX();
+        int getPosY();
+
     protected:
 
         int attack;
