@@ -5,6 +5,7 @@ AchievementSystem::AchievementSystem()
     numOfAchievements = 0;
     numUnlocked = 0;
 
+    //Add default achievements for the default achievement system
     addAchievement(new Achievement("1 Kill", GameEvent::TYPE_KILLS, 1));
     addAchievement(new Achievement("50 Kills", GameEvent::TYPE_KILLS, 50));
     addAchievement(new Achievement("100 Kills", GameEvent::TYPE_KILLS, 100));
@@ -26,12 +27,14 @@ AchievementSystem::~AchievementSystem()
     }
 }
 
+///Add a new achievement to the list
 void AchievementSystem::addAchievement(Achievement* achievement)
 {
     achievements.push_back(achievement);
     numOfAchievements++;
 }
 
+///Remove an achievement from the list
 void AchievementSystem::removeAchievement(Achievement* achievement)
 {
     for(int i = 0; i < numOfAchievements; i++)
@@ -45,12 +48,15 @@ void AchievementSystem::removeAchievement(Achievement* achievement)
     }
 }
 
+///Update method called by the subject in observer pattern
 void AchievementSystem::update(GameEvent event)
 {
     for(int i =0; i < numOfAchievements; i++)
     {
+        //check if the achievement is finished
         if (achievements[i]->updateProgress(event.getType(), event.getValue()))
         {
+            //if so unlock the achievement
             achievements[i]->unlock();
             numUnlocked++;
             removeAchievement((achievements[i]));

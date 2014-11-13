@@ -15,11 +15,16 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+
+    addObserver(new AchievementSystem());
+    addObserver(new SoundSystem());
+
     this->moveUp = new MoveUpCommand(player);
     this->moveDown = new MoveDownCommand(player);
     this->moveLeft = new MoveLeftCommand(player);
     this->moveRight = new MoveRightCommand(player);
     this->attack = new AttackCommand(player);
+
 }
 
 Game::~Game()
