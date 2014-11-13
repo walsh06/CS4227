@@ -7,6 +7,7 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+    srand(time(NULL));
 }
 
 Game::~Game()
@@ -31,13 +32,13 @@ void Game::update()
 
         if (enemyCount < 1)
         {
-            notify(TYPE_POINTS, 10000 - timer);
+            notify(GameEvent::TYPE_POINTS, 10000 - timer);
         }
 
         if(enemyCount < oldEnemyCount)
         {
             int difference = oldEnemyCount - enemyCount;
-            notify(TYPE_KILLS,(difference));
+            notify(GameEvent::TYPE_KILLS,(difference));
             moneyDrop(difference);
         }
 
@@ -56,7 +57,7 @@ void Game::moneyDrop(int times)
 {
     for(int i = 0 ; i < times ; i++)
         if(rand() % 100 < percentage)
-            notify(TYPE_MONEY, 10);
+            notify(GameEvent::TYPE_MONEY, 10);
 }
 
 void Game::addEnemy(EnemyInterface* enemy)

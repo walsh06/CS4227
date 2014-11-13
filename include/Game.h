@@ -7,6 +7,7 @@
 #include "EnemyFactory.h"
 #include "Player.h"
 #include <unistd.h>
+#include <time.h>
 #include <iostream>
 
 using namespace std;
@@ -14,8 +15,6 @@ using namespace std;
 class Game  : public GameSubject
 {
     public:
-
-        static const int TYPE_KILLS = 1, TYPE_POINTS = 2, TYPE_MONEY = 3;
 
         vector<EnemyInterface *> enemies;
         Player* player;
