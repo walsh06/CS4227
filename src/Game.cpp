@@ -9,6 +9,12 @@
 #define QUIT 6
 #define NONE 0
 
+/**
+ Game is our MVC Controller.
+ Constructor: Starts the game and declares
+ all the command, devices, observers, ect.
+ that is neded by the game.
+*/
 Game::Game()
 {
     this->numOfObservers = 0;
@@ -28,6 +34,10 @@ Game::Game()
 
 }
 
+/**
+ Deletes everything when the game ends.
+ This stops memory leaks.
+*/
 Game::~Game()
 {
     delete player;
@@ -39,11 +49,17 @@ Game::~Game()
     delete attack;
 }
 
+/**
+ Starts the game and continusely runs
+ until the uses calls QUIT.
+*/
 void Game::update()
 {
     bool running = true;
     this->gameView = new GameView();
     int type;
+
+    // Adding the commands to the device buttons
     deviceAt = new DeviceButton(attack);
     deviceU = new DeviceButton(moveUp);
     deviceL = new DeviceButton(moveLeft);
@@ -51,6 +67,7 @@ void Game::update()
     deviceR = new DeviceButton(moveRight);
 
     int timer = 0;
+    // main loop of the game.
     while(running)
     {
         type = gameView->checkButtonState();
@@ -76,11 +93,15 @@ void Game::update()
             running = false;
         }
 
-
+        //Set type to none as no button was pressed.
         type = NONE;
+
         gameView->draw("Player", player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
         this->player->update();
+        //commands will be processed by client on thread
+        //depending on desired input device.
+
         int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
@@ -105,7 +126,6 @@ void Game::update()
         this->player->update();
         //commands will be processed by client on thread
         //depending on desired input device.
-
 
         usleep(300000);
 

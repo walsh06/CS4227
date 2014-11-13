@@ -21,14 +21,11 @@ GameView::GameView()
     #endif // __linux__
 }
 
-GameView::~GameView()
-{
-    //dtor
-}
 
-
-
-
+/**
+ Checks which button the player is pressing
+ and determines the correct #define to return.
+*/
 int GameView::checkButtonState()
 {
     char c = keyboard->getKey();
@@ -60,7 +57,12 @@ int GameView::checkButtonState()
     return NONE;
 }
 
+/**
+ Draws the object to the screen
+ at the new x and y.
+*/
 void GameView::draw(string name, int x, int y)
+
 {
         cout << name << " | (x, y) : (" << x << ", " << y << ")" << endl;
 }
