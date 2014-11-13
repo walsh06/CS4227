@@ -9,7 +9,6 @@ class TestEnemyFactory : public EnemyFactory
 {
     public:
         TestEnemyFactory();
-        /** Default destructor*/
         virtual ~TestEnemyFactory();
     protected:
     private:
