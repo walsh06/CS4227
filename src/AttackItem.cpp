@@ -1,19 +1,17 @@
 #include "AttackItem.h"
 
-/// Attack Item Constructor, calls super constructor
+/**
+ Attack Item Constructor, calls super constructor
+*/
 AttackItem::AttackItem(Enemy* enemy)
 : EnemyItemDecorator(enemy)
 {
 }
 
-/// Attack Item Destructor
-AttackItem::~AttackItem()
-{
-
-}
-
-/// Returns the result of the super's getAttack + 2.
-/// Decorator Method
+/**
+ Returns the result of the super's getAttack + 2.
+ Decorator Method
+*/
 int AttackItem::getAttack()
 {
     return EnemyItemDecorator::getAttack() + 2;

@@ -10,7 +10,9 @@ TestEnemyMovement::~TestEnemyMovement()
     //dtor
 }
 
-///Test if the enemy horizontal movement strategy works
+/**
+ Test if the enemy horizontal movement strategy works
+*/
 TEST(EnemyMoveTest, TestMoveHorizontal)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
@@ -32,7 +34,9 @@ TEST(EnemyMoveTest, TestMoveHorizontal)
     ASSERT_EQ(enemy->getPosY(), 10);
 }
 
-///Test if the enemy Vertical movement strategy works and update correctly
+/**
+ Test if the enemy Vertical movement strategy works and update correctly
+*/
 TEST(EnemyMoveTest, TestMoveVertical)
 {
     EnemyOrientation* moveStrategy = new EnemyVertical();
@@ -54,7 +58,9 @@ TEST(EnemyMoveTest, TestMoveVertical)
     ASSERT_EQ(enemy->getPosY(), 8);
 }
 
-///Test if the enemy movement strategies change correctly
+/**
+ Test if the enemy movement strategies change correctly
+*/
 TEST(EnemyMoveTest, TestChangeMoveStrategy)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();

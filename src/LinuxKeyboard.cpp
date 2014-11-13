@@ -5,12 +5,9 @@ LinuxKeyboard::LinuxKeyboard()
     //ctor
 }
 
-LinuxKeyboard::~LinuxKeyboard()
-{
-    //dtor
-}
-
-
+/**
+ Used with Linux Systems.
+*/
 char LinuxKeyboard::getKey()
 {
 

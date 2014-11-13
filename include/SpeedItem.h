@@ -9,8 +9,6 @@ class SpeedItem : public EnemyItemDecorator
     public:
         /** Default constructor */
         SpeedItem(Enemy* enemy);
-        /** Default destructor */
-        virtual ~SpeedItem();
 
         int getSpeed();
     protected:

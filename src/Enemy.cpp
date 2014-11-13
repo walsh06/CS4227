@@ -1,7 +1,9 @@
 #include "Enemy.h"
 
-/// Enemy Constructor, calls super constructor.
-/// Initializes health, attack, defense, speed, and strategy of the player
+/**
+ Enemy Constructor, calls super constructor.
+ Initializes health, attack, defense, speed, and strategy of the player
+*/
 Enemy::Enemy() :
 EnemyInterface()
 {
@@ -15,13 +17,17 @@ EnemyInterface()
     posY = 10;
 }
 
-/// Enemy destrcutor. Deletes pointer to moveStrategy
+/**
+ Enemy destrcutor. Deletes pointer to moveStrategy
+*/
 Enemy::~Enemy()
 {
     delete this->moveStrategy;
 }
 
-/// Enemy update method. Handles Enemy movement and health
+/**
+ Enemy update method. Handles Enemy movement and health
+*/
 void Enemy::update()
 {
     //update the enemies each tick
@@ -33,52 +39,73 @@ void Enemy::update()
     }
 }
 
+/**
+ Draws the enemy to the view.
+*/
 void Enemy::draw(GameView* view)
 {
     view->draw("Enemy", posX, posY);
 }
 
-/// Returns the enemy's health.
+/**
+ Returns the enemy's health.
+*/
 int Enemy::getHealth()
 {
     return this->health;
 }
 
-/// Set the enemy health
+/**
+ Set the enemy health
+*/
 void Enemy::setHealth(int health)
 {
     this->health = health;
 }
 
-/// Returns the enemy's Attack.
+/**
+ Returns the enemy's Attack.
+*/
 int Enemy::getAttack()
 {
     return this->attack;
 }
 
-/// Returns the enemy's Defense.
+/**
+ Returns the enemy's Defense.
+*/
 int Enemy::getDefense()
 {
     return this->defense;
 }
 
-/// Returns the enemy's Speed.
+/**
+ Returns the enemy's Speed.
+*/
 int Enemy::getSpeed()
 {
     return this->speed;
 }
 
-/// Set the strategy of the Enemy.
+/**
+ Set the strategy of the Enemy.
+*/
 void Enemy::setStrategy(EnemyOrientation* moveStrategy)
 {
     this->moveStrategy = moveStrategy;
 }
 
+/**
+ Returns the enemy's x coordinate.
+*/
 int Enemy::getPosX()
 {
     return this->posX;
 }
 
+/**
+ Returns the enemy's y coordinate.
+*/
 int Enemy::getPosY()
 {
     return this->posY;

@@ -1,22 +1,18 @@
 #include "SpeedItem.h"
 
-
-/// Speed Item Constructor, calls super constructor
+/**
+ Speed Item Constructor, calls super constructor
+*/
 SpeedItem::SpeedItem(Enemy* enemy)
 : EnemyItemDecorator(enemy)
 {
     //ctor
-
 }
 
-/// Speed Item Destructor
-SpeedItem::~SpeedItem()
-{
-    //dtor
-}
-
-/// Returns the result of the super's getDefense + 2.
-/// Decorator Method
+/**
+ Returns the result of the super's getDefense + 2.
+ Decorator Method
+*/
 int SpeedItem::getSpeed()
 {
     return EnemyItemDecorator::getSpeed() + 2;

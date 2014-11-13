@@ -10,6 +10,11 @@
 
 using namespace std;
 
+/**
+ The game view is part of the MVC.
+ In the constructor the view determines
+ which keyboard setup to use.
+*/
 GameView::GameView()
 {
     #ifdef _WIN32
@@ -21,16 +26,13 @@ GameView::GameView()
     #endif // __linux__
 }
 
-GameView::~GameView()
-{
-    //dtor
-}
-
-
-
-
+/**
+ Returns a #define depending on which
+ buttons/keys are pressed in the view.
+*/
 int GameView::checkButtonState()
 {
+    // Keyboard decided in constructor.
     char c = keyboard->getKey();
     if(c == 's' || c =='S')
     {
@@ -60,6 +62,9 @@ int GameView::checkButtonState()
     return NONE;
 }
 
+/**
+ Draws the coordinates to the screen.
+*/
 void GameView::draw(string name, int x, int y)
 {
         cout << name << " | (x, y) : (" << x << ", " << y << ")" << endl;

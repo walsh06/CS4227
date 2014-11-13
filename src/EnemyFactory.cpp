@@ -1,7 +1,9 @@
 #include "EnemyFactory.h"
 
-/// Creates Enemy | Health = 10 Attack = 1 Speed = 1 Defense = 1
-/// With the movement strategy moveStrategy
+/**
+ Creates Enemy | Health = 10 Attack = 1 Speed = 1 Defense = 1
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createEnemy(EnemyOrientation* moveStrategy)
 {
     Enemy *enemy = new Enemy();
@@ -9,8 +11,10 @@ Enemy *EnemyFactory::createEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 1 Speed = 3 Defense = 1
-/// With the movement strategy moveStrategy
+/**
+ Creates Enemy | Health = 10 Attack = 1 Speed = 3 Defense = 1
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createSpeedEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -19,8 +23,9 @@ Enemy *EnemyFactory::createSpeedEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 3 Speed = 1 Defense = 1
-/// With the movement strategy moveStrategy
+/** Creates Enemy | Health = 10 Attack = 3 Speed = 1 Defense = 1
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createAttackEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -29,8 +34,9 @@ Enemy *EnemyFactory::createAttackEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 1 Speed = 1 Defense = 3
-/// With the movement strategy moveStrategy
+/** Creates Enemy | Health = 10 Attack = 1 Speed = 1 Defense = 3
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -39,8 +45,10 @@ Enemy *EnemyFactory::createDefenseEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 3 Speed = 1 Defense = 3
-/// With the movement strategy moveStrategy
+/**
+ Creates Enemy | Health = 10 Attack = 3 Speed = 1 Defense = 3
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createAttackDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -49,8 +57,9 @@ Enemy *EnemyFactory::createAttackDefenseEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 1 Speed = 3 Defense = 3
-/// With the movement strategy moveStrategy
+/** Creates Enemy | Health = 10 Attack = 1 Speed = 3 Defense = 3
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createSpeedDefenseEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -59,8 +68,10 @@ Enemy *EnemyFactory::createSpeedDefenseEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health = 10 Attack = 3 Speed = 3 Defense = 1
-/// With the movement strategy moveStrategy
+/**
+ Creates Enemy | Health = 10 Attack = 3 Speed = 3 Defense = 1
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createAttackSpeedEnemy(EnemyOrientation* moveStrategy)
 {
 
@@ -69,8 +80,10 @@ Enemy *EnemyFactory::createAttackSpeedEnemy(EnemyOrientation* moveStrategy)
     return enemy;
 }
 
-/// Creates Enemy | Health =  health Attack = 1 Speed = 1 Defense = 1
-/// With the movement strategy moveStrategy
+/**
+ Creates Enemy | Health =  health Attack = 1 Speed = 1 Defense = 1
+ With the movement strategy moveStrategy
+*/
 Enemy *EnemyFactory::createEnemyWithHealth(EnemyOrientation* moveStrategy,int health)
 {
 

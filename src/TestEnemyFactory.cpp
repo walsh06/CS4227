@@ -1,7 +1,9 @@
 #include "TestEnemyFactory.h"
 
-/// Tests BasicEnemy
-/// Checks if health is 10, defense is 1, attack is 1, speed is 1
+/**
+ Tests BasicEnemy
+ Checks if health is 10, defense is 1, attack is 1, speed is 1
+*/
 TEST(EnemyTest, BasicEnemyTest)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
@@ -17,8 +19,10 @@ TEST(EnemyTest, BasicEnemyTest)
     std::cout << "Enemy Killed" << std::endl;
 }
 
-/// Tests SpeedEnemy
-/// Checks if speed is 3
+/**
+ Tests SpeedEnemy
+ Checks if speed is 3
+*/
 TEST(EnemyTest, SpeedEnemyTest)
 {
 
@@ -40,8 +44,10 @@ TEST(EnemyTest, SpeedEnemyTest)
 
 }
 
-/// Tests AttackEnemy
-/// Checks if  attack is 3
+/**
+ Tests AttackEnemy
+ Checks if  attack is 3
+*/
 TEST(EnemyTest, AttackEnemyTest)
 {
 
@@ -61,8 +67,10 @@ TEST(EnemyTest, AttackEnemyTest)
 
 }
 
-/// Tests DefenseEnemy
-/// Checks if defense is 3
+/**
+ Tests DefenseEnemy
+ Checks if defense is 3
+*/
 TEST(EnemyTest, DefenseEnemyTest)
 {
 
@@ -82,8 +90,10 @@ TEST(EnemyTest, DefenseEnemyTest)
 
 }
 
-/// Tests AttackEnemy
-/// Checks if defense is 3, attack is 3
+/**
+ Tests AttackEnemy
+ Checks if defense is 3, attack is 3
+*/
 TEST(EnemyTest, AttackDefenseEnemyTest)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
@@ -103,8 +113,10 @@ TEST(EnemyTest, AttackDefenseEnemyTest)
 
 }
 
-/// Tests SpeedDefenseEnemy
-/// Checks if defense is 3, speed is 3
+/**
+ Tests SpeedDefenseEnemy
+ Checks if defense is 3, speed is 3
+*/
 TEST(EnemyTest, SpeedDefenseEnemyTest)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
@@ -124,8 +136,10 @@ TEST(EnemyTest, SpeedDefenseEnemyTest)
 
 }
 
-/// Tests SpeedAttackEnemy
-/// Checks attack is 3, speed is 3
+/**
+ Tests SpeedAttackEnemy
+ Checks attack is 3, speed is 3
+*/
 TEST(EnemyTest, SpeedAttackEnemyTest)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
@@ -145,8 +159,10 @@ TEST(EnemyTest, SpeedAttackEnemyTest)
 
 }
 
-/// Tests BasicEnemy
-/// Checks if health is 10, defense is 1, attack is 1, speed is 1
+/**
+ Tests BasicEnemy
+ Checks if health is 10, defense is 1, attack is 1, speed is 1
+*/
 TEST(EnemyTest, EnemyWithHealthTest)
 {
 

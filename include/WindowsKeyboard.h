@@ -14,8 +14,6 @@ class WindowsKeyboard : public KeyboardBridgeInterface
     public:
         /** Default constructor */
         WindowsKeyboard();
-        /** Default destructor */
-        virtual ~WindowsKeyboard();
         char getKey();
     protected:
     private:
