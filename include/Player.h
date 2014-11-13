@@ -4,8 +4,10 @@
 #include "GameObserver.h"
 #include "GameSubject.h"
 
-/// The player class is part of the Model of the MVC
-/// It holds and manipulates the data of the model.
+/**
+ The player class is part of the Model of the MVC
+ It holds and manipulates the data of the model.
+*/
 class Player
 {
     public:

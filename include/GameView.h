@@ -19,11 +19,13 @@
 
 using namespace std;
 
-/// This is the View for the game.
-/// This will handle user input and
-/// button pressed. The controller
-/// will then take this input at a
-/// later time.
+/**
+ This is the View for the game.
+ This will handle user input and
+ button pressed. The controller
+ will then take this input at a
+ later time.
+*/
 class GameView
 {
     public:

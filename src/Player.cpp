@@ -1,7 +1,9 @@
 #include "Player.h"
 #include <iostream>
 
-//Model of the MVC
+/**
+ Model of the MVC
+*/
 Player::Player()
 {
     killCount = 0;
