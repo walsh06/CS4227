@@ -12,6 +12,6 @@ AttackCommand::AttackCommand(Player* player)
 /// Executes calls the players attack method.
 void AttackCommand::execute()
 {
-    player->moveDown();
+    player->attack();
 }
 

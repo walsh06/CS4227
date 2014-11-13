@@ -1,15 +1,6 @@
 #include "EnemyVertical.h"
 
-EnemyVertical::EnemyVertical()
-{
-    //ctor
-}
-
-EnemyVertical::~EnemyVertical()
-{
-    //dtor
-}
-
+///Vertical move strategy for an enemy
 void EnemyVertical::moveDirection(int &posX, int &posY, int speed)
 {
     posY -= speed;

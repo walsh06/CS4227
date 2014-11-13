@@ -5,7 +5,7 @@
 #include "EnemyOrientation.h"
 #include "EnemyHorizontal.h"
 #include "EnemyVertical.h"
-
+#include "GameView.h"
 
 class Enemy : public EnemyInterface
 {
@@ -25,6 +25,8 @@ class Enemy : public EnemyInterface
 
         int getPosX();
         int getPosY();
+
+        void draw(GameView* view);
 
     protected:
 
