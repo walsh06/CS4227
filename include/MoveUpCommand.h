@@ -6,12 +6,11 @@
 
 using namespace std;
 
-//Command Class.
+/// Command to allow the player to move upwards.
 class MoveUpCommand:public Command
 {
     public:
         MoveUpCommand(Player* player);
-        virtual ~MoveUpCommand();
         void execute();
     protected:
     private:

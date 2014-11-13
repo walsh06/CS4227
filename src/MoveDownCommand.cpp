@@ -1,19 +1,19 @@
 #include "MoveDownCommand.h"
 #include "Player.h"
 
-//Concrete Command to move downwards takes a player movement Reciever.
+/**
+ This is the Concrete Command for attacking.
+ Constructor: takes a player pointer.
+*/
 MoveDownCommand::MoveDownCommand(Player* player)
 {
     this->player = player;
 }
 
-//Destructor
-MoveDownCommand::~MoveDownCommand()
-{
-
-}
-
-//Command allowing the player to move downwards.
+/**
+ Command allowing the player to move downwards.
+ Executes calls the players move down method.
+*/
 void MoveDownCommand::execute()
 {
     player->moveDown();
