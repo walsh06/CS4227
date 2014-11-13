@@ -12,11 +12,6 @@ Player::Player()
     yPos = 0;
 }
 
-Player::~Player()
-{
-    //dtor
-}
-
 int Player::getPoints()
 {
     return points;
