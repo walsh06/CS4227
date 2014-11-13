@@ -2,7 +2,7 @@
 #define ENEMYFACTORY_H
 
 
-#include "Enemy.h"
+#include "EnemyInterface.h"
 #include "SpeedItem.h"
 #include "AttackItem.h"
 #include "DefenseItem.h"
@@ -13,15 +13,15 @@
 class EnemyFactory
 {
     public:
-        static Enemy *createEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createEnemyWithHealth(EnemyOrientation* moveStrategy,int health);
+        static EnemyInterface *createEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createEnemyWithHealth(EnemyOrientation* moveStrategy,int health);
 
-        static Enemy *createSpeedEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createAttackEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createDefenseEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createSpeedDefenseEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createAttackDefenseEnemy(EnemyOrientation* moveStrategy);
-        static Enemy *createAttackSpeedEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createSpeedEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createAttackEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createDefenseEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createSpeedDefenseEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createAttackDefenseEnemy(EnemyOrientation* moveStrategy);
+        static EnemyInterface *createAttackSpeedEnemy(EnemyOrientation* moveStrategy);
 
     protected:
     private:
