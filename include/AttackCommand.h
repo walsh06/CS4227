@@ -6,11 +6,12 @@
 
 using namespace std;
 
+///The Command which will allow the player to attack
+///enemy ships.
 class AttackCommand:public Command
 {
    public:
         AttackCommand(Player* player);
-        virtual ~AttackCommand();
         void execute();
     protected:
     private:

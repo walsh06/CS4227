@@ -6,12 +6,11 @@
 
 using namespace std;
 
-//Command Class.
+/// Command to allow the player to move downwards.
 class MoveDownCommand:public Command
 {
     public:
         MoveDownCommand(Player* player);
-        virtual ~MoveDownCommand();
         void execute();
     protected:
     private:
