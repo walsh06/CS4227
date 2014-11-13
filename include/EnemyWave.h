@@ -1,3 +1,5 @@
+///Removed
+/*
 #ifndef ENEMYWAVE_H
 #define ENEMYWAVE_H
 
@@ -24,3 +26,4 @@ class EnemyWave : public EnemyInterface
 };
 
 #endif // ENEMYWAVE_H
+*/
