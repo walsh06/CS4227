@@ -15,11 +15,16 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+
+    addObserver(new AchievementSystem());
+    addObserver(new SoundSystem());
+
     this->moveUp = new MoveUpCommand(player);
     this->moveDown = new MoveDownCommand(player);
     this->moveLeft = new MoveLeftCommand(player);
     this->moveRight = new MoveRightCommand(player);
     this->attack = new AttackCommand(player);
+
 }
 
 Game::~Game()
@@ -43,8 +48,7 @@ void Game::update()
     deviceL = new DeviceButton(moveLeft);
     deviceD = new DeviceButton(moveDown);
     deviceR = new DeviceButton(moveRight);
-    //DeviceButton* device = new DeviceButton();
-    //GameController* gc = new GameController(gw,p);
+
     int timer = 0;
     while(running)
     {
@@ -70,14 +74,17 @@ void Game::update()
             std::cout<<"Exiting game"<<std::endl;
             running = false;
         }
+
+
         type = NONE;
-        gameView->setXY(player->getXPosition(),player->getYPosition());
+        gameView->draw(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
-        //this->player->update();
+        this->player->update();
         int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
+            enemy->draw(gameView);
         }
 
         enemyCount = enemies.size();
@@ -99,7 +106,7 @@ void Game::update()
         //depending on desired input device.
 
 
-        usleep(1000);
+        usleep(30000);
 
         timer += 1 ;
     }

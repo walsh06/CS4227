@@ -62,6 +62,8 @@
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
 		<Unit filename="include/GameView.h" />
+		<Unit filename="include/KeyboardBridgeInterface.h" />
+		<Unit filename="include/LinuxKeyboard.h" />
 		<Unit filename="include/MoveDownCommand.h" />
 		<Unit filename="include/MoveLeftCommand.h" />
 		<Unit filename="include/MoveRightCommand.h" />
@@ -72,6 +74,8 @@
 		<Unit filename="include/TestAchievementSystem.h" />
 		<Unit filename="include/TestCommand.h" />
 		<Unit filename="include/TestEnemyFactory.h" />
+		<Unit filename="include/WindowsKeyboard.h" />
+		<Unit filename="include/TestEnemyMovement.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
 		<Unit filename="src/AttackCommand.cpp" />
@@ -88,6 +92,7 @@
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/GameView.cpp" />
+		<Unit filename="src/LinuxKeyboard.cpp" />
 		<Unit filename="src/MoveDownCommand.cpp" />
 		<Unit filename="src/MoveLeftCommand.cpp" />
 		<Unit filename="src/MoveRightCommand.cpp" />
@@ -98,6 +103,8 @@
 		<Unit filename="src/TestAchievementSystem.cpp" />
 		<Unit filename="src/TestCommand.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
+		<Unit filename="src/WindowsKeyboard.cpp" />
+		<Unit filename="src/TestEnemyMovement.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />

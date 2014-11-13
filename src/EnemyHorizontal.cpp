@@ -1,15 +1,6 @@
 #include "EnemyHorizontal.h"
 
-EnemyHorizontal::EnemyHorizontal()
-{
-    //ctor
-}
-
-EnemyHorizontal::~EnemyHorizontal()
-{
-    //dtor
-}
-
+///Horizontal move strategy for an enemy
 void EnemyHorizontal::moveDirection(int &posX, int &posY, int speed)
 {
     posX-=speed;

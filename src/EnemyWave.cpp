@@ -13,6 +13,7 @@ EnemyWave::~EnemyWave()
     }
 }
 
+///Common method between composite and leaf in composite pattern
 void EnemyWave::update()
 {
     //update the enemies each tick
@@ -27,12 +28,23 @@ void EnemyWave::update()
     }
 }
 
+
+void EnemyWave::draw(GameView* view)
+{
+    for (int i = 0; i < waveSize; i++ )
+    {
+        wave[i]->draw(view);
+    }
+}
+
+///Add enemy to the list
 void EnemyWave::addEnemy(EnemyInterface* enemy)
 {
     wave.push_back(enemy);
     waveSize++;
 }
 
+///remove enemy from the list
 void EnemyWave::removeEnemy(EnemyInterface* enemy)
 {
     for(int i = 0; i < waveSize; i++)
@@ -46,6 +58,7 @@ void EnemyWave::removeEnemy(EnemyInterface* enemy)
     }
 }
 
+///get an enemy from the list
 EnemyInterface* EnemyWave::getEnemy(int enemyIndex)
 {
     return wave[enemyIndex];

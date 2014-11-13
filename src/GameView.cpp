@@ -1,8 +1,4 @@
 #include "GameView.h"
-#include <windows.h>
-#include <iostream>
-#include <string>
-#include <conio.h>
 
 #define ATTACK 1
 #define LEFT 2
@@ -16,7 +12,13 @@ using namespace std;
 
 GameView::GameView()
 {
-    //ctor
+    #ifdef _WIN32
+        keyboard  = new WindowsKeyboard();
+    #endif // _WIN32
+
+    #ifdef __linux__
+        keyboard = new LinuxKeyboard();
+    #endif // __linux__
 }
 
 GameView::~GameView()
@@ -24,9 +26,12 @@ GameView::~GameView()
     //dtor
 }
 
+
+
+
 int GameView::checkButtonState()
 {
-    char c = getch();
+    char c = keyboard->getKey();
     if(c == 's' || c =='S')
     {
         return DOWN;
@@ -54,10 +59,12 @@ int GameView::checkButtonState()
 
     return NONE;
 }
-void GameView::setXY(int x, int y)
+
+void GameView::draw(int x, int y)
 {
         cout<<"X = ";
         cout<<x<<endl;
         cout<<"Y = ";
         cout<<y<<endl;
 }
+
