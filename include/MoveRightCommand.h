@@ -6,7 +6,9 @@
 
 using namespace std;
 
-/// Command to allow the player to move right.
+/**
+ Command to allow the player to move right.
+*/
 class MoveRightCommand:public Command
 {
     public:

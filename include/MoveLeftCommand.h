@@ -6,7 +6,9 @@
 
 using namespace std;
 
-/// Command to allow the player to move left.
+/**
+ Command to allow the player to move left.
+*/
 class MoveLeftCommand:public Command
 {
     public:

@@ -3,14 +3,15 @@
 #include "Command.h"
 
 
-///Contains a command and will be linked to a button
-///When the button is pressed the command will be executed.
+/**
+ Contains a command and will be linked to a button
+ When the button is pressed the command will be executed.
+*/
 class DeviceButton
 {
     public:
         DeviceButton(Command* command);
         virtual ~DeviceButton();
-        void setCommand(Command* c);
         void press();
     protected:
     private:

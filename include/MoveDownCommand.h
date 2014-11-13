@@ -6,7 +6,9 @@
 
 using namespace std;
 
-/// Command to allow the player to move downwards.
+/**
+ Command to allow the player to move downwards.
+*/
 class MoveDownCommand:public Command
 {
     public:

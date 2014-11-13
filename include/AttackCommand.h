@@ -6,8 +6,10 @@
 
 using namespace std;
 
-///The Command which will allow the player to attack
-///enemy ships.
+/**
+ The Command which will allow the player to attack
+ enemy ships.
+*/
 class AttackCommand:public Command
 {
    public:
