@@ -17,3 +17,8 @@ void DeviceButton::press()
 {
     aCommand->execute();
 }
+
+void DeviceButton::setCommand(Command* c)
+{
+    aCommand = c;
+}

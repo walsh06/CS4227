@@ -9,13 +9,12 @@ AttackCommand::AttackCommand(Player* player)
 //Destructor
 AttackCommand::~AttackCommand()
 {
-    this->player = NULL;
-    delete player;
+    //dtor
 }
 
 //Command allowing the player to move downwards.
 void AttackCommand::execute()
 {
-    player->moveDown();
+    player->attack();
 }
 

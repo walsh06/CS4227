@@ -2,6 +2,8 @@
 #define ENEMYWAVE_H
 
 #include "EnemyInterface.h"
+#include "GameView.h"
+
 #include <vector>
 
 class EnemyWave : public EnemyInterface
@@ -15,6 +17,8 @@ class EnemyWave : public EnemyInterface
         EnemyInterface* getEnemy(int enemyIndex);
 
         void update();
+
+        void draw(GameView* view);
 
     protected:
     private:

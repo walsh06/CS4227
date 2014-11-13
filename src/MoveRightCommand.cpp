@@ -10,6 +10,7 @@ MoveRightCommand::MoveRightCommand(Player* player)
 //Destructor
 MoveRightCommand::~MoveRightCommand()
 {
+    //dtor
 }
 
 //Command allowing the player to move right.
