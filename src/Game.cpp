@@ -7,6 +7,9 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+
+    addObserver(new AchievementSystem());
+    addObserver(new SoundSystem());
 }
 
 Game::~Game()
