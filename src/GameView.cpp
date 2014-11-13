@@ -54,7 +54,6 @@ int GameView::checkButtonState()
 
     return NONE;
 }
-
 void GameView::setXY(int x, int y)
 {
         cout<<"X = ";

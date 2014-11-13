@@ -2,7 +2,6 @@
 #include <iostream>
 #include <windows.h>
 #include "Player.h"
-#include "GameController.h"
 #include "GameView.h"
 #include "DeviceButton.h"
 #include "Game.h"
