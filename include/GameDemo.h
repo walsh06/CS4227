@@ -21,7 +21,6 @@ class GameDemo
     protected:
     private:
         Game* game;
-        vector<EnemyInterface*> enemies;
 };
 
 #endif // GAMEDEMO_H

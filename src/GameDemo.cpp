@@ -1,15 +1,24 @@
 #include "GameDemo.h"
 
+/**
+ Constructor: Creates a game demo.
+*/
 GameDemo::GameDemo()
 {
     game = new Game();
 }
 
+/**
+ Destructor: Removes a game demo.
+*/
 GameDemo::~GameDemo()
 {
-    //dtor
+    delete game;
 }
 
+/**
+ Runs the game demo.
+*/
 void GameDemo::runDemo()
 {
     char input = ' ';
@@ -40,10 +49,6 @@ void GameDemo::runDemo()
 
             default:
                 break;
-
         }
-
-
-
     }
 }

@@ -8,7 +8,9 @@ TestCommand::~TestCommand()
     //dtor
 }
 
-///test single key presses
+/**
+ Test single key presses
+*/
 TEST(CommandTest, TestMoveKeys)
 {
     Player* testPlayer = new Player();
@@ -53,7 +55,9 @@ TEST(CommandTest, TestMoveKeys)
     delete testPlayer;
 }
 
-///Test a sequence of commands
+/**
+ Test a sequence of commands
+*/
 TEST(CommandTest, TestMoveSequence)
 {
     Player* testPlayer = new Player();

@@ -5,11 +5,6 @@ WindowsKeyboard::WindowsKeyboard()
     //ctor
 }
 
-WindowsKeyboard::~WindowsKeyboard()
-{
-    //dtor
-}
-
 char WindowsKeyboard::getKey()
 {
     #ifdef _WIN32

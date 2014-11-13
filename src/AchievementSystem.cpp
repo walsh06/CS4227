@@ -27,14 +27,18 @@ AchievementSystem::~AchievementSystem()
     }
 }
 
-///Add a new achievement to the list
+/**
+ Add a new achievement to the list
+*/
 void AchievementSystem::addAchievement(Achievement* achievement)
 {
     achievements.push_back(achievement);
     numOfAchievements++;
 }
 
-///Remove an achievement from the list
+/**
+ Remove an achievement from the list
+*/
 void AchievementSystem::removeAchievement(Achievement* achievement)
 {
     for(int i = 0; i < numOfAchievements; i++)
@@ -48,7 +52,9 @@ void AchievementSystem::removeAchievement(Achievement* achievement)
     }
 }
 
-///Update method called by the subject in observer pattern
+/**
+ Update method called by the subject in observer pattern
+*/
 void AchievementSystem::update(GameEvent event)
 {
     for(int i =0; i < numOfAchievements; i++)
@@ -65,6 +71,9 @@ void AchievementSystem::update(GameEvent event)
     }
 }
 
+/**
+ Return the number of unlocked achievements
+*/
 int AchievementSystem::getNumUnlocked()
 {
     return numUnlocked;

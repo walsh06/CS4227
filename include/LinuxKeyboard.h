@@ -16,8 +16,6 @@ class LinuxKeyboard : public KeyboardBridgeInterface
     public:
         /** Default constructor */
         LinuxKeyboard();
-        /** Default destructor */
-        virtual ~LinuxKeyboard();
 
         char getKey();
     protected:

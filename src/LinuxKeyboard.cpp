@@ -5,12 +5,11 @@ LinuxKeyboard::LinuxKeyboard()
     //ctor
 }
 
-LinuxKeyboard::~LinuxKeyboard()
-{
-    //dtor
-}
-
-
+/**
+ Used with Linux Systems.
+ Code was aquired from: http://cboard.cprogramming.com/c-programming/63166-kbhit-linux.html
+ and edited (slightly).
+*/
 char LinuxKeyboard::getKey()
 {
 

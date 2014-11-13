@@ -7,7 +7,6 @@ class Achievement
 {
     public:
         Achievement(std::string name, int type, int requiredValue);
-        virtual ~Achievement();
 
         bool updateProgress(int type, int newValue);
         void unlock();

@@ -36,7 +36,6 @@ Game::Game()
 
 /**
  Deletes everything when the game ends.
- This stops memory leaks.
 */
 Game::~Game()
 {
@@ -50,7 +49,7 @@ Game::~Game()
 }
 
 /**
- Starts the game and continusely runs
+ Update is the game loop and starts the game
  until the uses calls QUIT.
 */
 void Game::update()
@@ -133,6 +132,9 @@ void Game::update()
     }
 }
 
+/**
+ Gives money to player depend on how many times.
+*/
 void Game::moneyDrop(int times)
 {
     for(int i = 0 ; i < times ; i++)
@@ -140,11 +142,17 @@ void Game::moneyDrop(int times)
             notify(GameEvent::TYPE_MONEY, 10);
 }
 
+/**
+ Adds an enemy to the game.
+*/
 void Game::addEnemy(EnemyInterface* enemy)
 {
     enemies.push_back(enemy);
 }
 
+/**
+ Clears an enemy from the game.
+*/
 void Game::clearEnemies()
 {
     for (auto &enemy : enemies) // access by reference to avoid copying
@@ -153,11 +161,18 @@ void Game::clearEnemies()
     }
 }
 
+/**
+ Adds an observer to the game.
+*/
 void Game::addObserver(GameObserver* o)
 {
     observers.push_back(o);
     numOfObservers++;
 }
+
+/**
+ Removes an observer from the game.
+*/
 void Game::removeObserver(GameObserver* o)
 {
     for(int i = 0; i < numOfObservers; i++)
@@ -170,6 +185,9 @@ void Game::removeObserver(GameObserver* o)
     }
 }
 
+/**
+ Notify the observers.
+*/
 void Game::notify(int type, int value)
 {
     #pragma omp parallel for
@@ -180,11 +198,17 @@ void Game::notify(int type, int value)
     }
 }
 
+/**
+ Get the percentage.
+*/
 int Game::getPercentage()
 {
     return this->percentage;
 }
 
+/**
+ Set the percentage
+*/
 void Game::setPercentage(int percentage)
 {
     this->percentage = percentage;

@@ -8,8 +8,6 @@ class AttackItem : public EnemyItemDecorator
     public:
         /** Default constructor */
         AttackItem(Enemy* enemy);
-        /** Default destructor */
-        virtual ~AttackItem();
 
         int getAttack();
     protected:
