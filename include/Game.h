@@ -33,6 +33,7 @@ class Game  : public GameSubject
         virtual ~Game();
         void update();
         void addEnemy(EnemyInterface* enemy);
+        void clearEnemies();
         void addObserver(GameObserver* o);
         void removeObserver(GameObserver* o);
         int getPercentage();

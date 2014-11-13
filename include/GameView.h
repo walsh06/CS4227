@@ -3,10 +3,7 @@
 #include <iostream>
 #include <string>
 #include <KeyboardBridgeInterface.h>
-
 #include <WindowsKeyboard.h>
-
-
 
 #ifdef _WIN32
 #include "WindowsKeyboard.h"
@@ -25,7 +22,7 @@ class GameView
         GameView();
         virtual ~GameView();
         int checkButtonState();
-        void draw(int x, int y);
+        void draw(string name, int x, int y);
 
         KeyboardBridgeInterface* keyboard;
 

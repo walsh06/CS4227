@@ -15,8 +15,13 @@ TEST(EnemyTest, BasicEnemyTest)
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> 7dbf7565166c330a51ae9eebd6a9f274bf2b1d69
 }
 
 /// Tests SpeedEnemy
@@ -31,7 +36,11 @@ TEST(EnemyTest, SpeedEnemyTest)
 
     std::cout << "Enemy Created" << std::endl;
 
+    ASSERT_EQ(enemy->getHealth(), 10);
+    ASSERT_EQ(enemy->getAttack(), 1);
+    ASSERT_EQ(enemy->getDefense(), 1);
     ASSERT_EQ(enemy->getSpeed(), newSpeed);
+
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
@@ -49,7 +58,10 @@ TEST(EnemyTest, AttackEnemyTest)
     Enemy *enemy = EnemyFactory::createAttackEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
+    ASSERT_EQ(enemy->getHealth(), 10);
     ASSERT_EQ(enemy->getAttack(), newAttack);
+    ASSERT_EQ(enemy->getDefense(), 1);
+    ASSERT_EQ(enemy->getSpeed(), 1);
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
@@ -67,7 +79,10 @@ TEST(EnemyTest, DefenseEnemyTest)
     Enemy *enemy = EnemyFactory::createDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
+    ASSERT_EQ(enemy->getHealth(), 10);
+    ASSERT_EQ(enemy->getAttack(), 1);
     ASSERT_EQ(enemy->getDefense(), newDefense);
+    ASSERT_EQ(enemy->getSpeed(), 1);
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
@@ -85,8 +100,10 @@ TEST(EnemyTest, AttackDefenseEnemyTest)
     Enemy *enemy = EnemyFactory::createAttackDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
-    ASSERT_EQ(enemy->getDefense(), newDefense);
+    ASSERT_EQ(enemy->getHealth(), 10);
     ASSERT_EQ(enemy->getAttack(), newAttack);
+    ASSERT_EQ(enemy->getDefense(), newDefense);
+    ASSERT_EQ(enemy->getSpeed(), 1);
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
@@ -104,6 +121,8 @@ TEST(EnemyTest, SpeedDefenseEnemyTest)
     Enemy *enemy = EnemyFactory::createSpeedDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
+    ASSERT_EQ(enemy->getHealth(), 10);
+    ASSERT_EQ(enemy->getAttack(), 1);
     ASSERT_EQ(enemy->getDefense(), newDefense);
     ASSERT_EQ(enemy->getSpeed(), newSpeed);
 
@@ -123,7 +142,9 @@ TEST(EnemyTest, SpeedAttackEnemyTest)
     Enemy *enemy = EnemyFactory::createAttackSpeedEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
+    ASSERT_EQ(enemy->getHealth(), 10);
     ASSERT_EQ(enemy->getAttack(), newAttack);
+    ASSERT_EQ(enemy->getDefense(), 1);
     ASSERT_EQ(enemy->getSpeed(), newSpeed);
 
     delete enemy;

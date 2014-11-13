@@ -58,6 +58,7 @@
 		<Unit filename="include/EnemyWave.h" />
 		<Unit filename="include/EnemyWaveFactory.h" />
 		<Unit filename="include/Game.h" />
+		<Unit filename="include/GameDemo.h" />
 		<Unit filename="include/GameEvent.h" />
 		<Unit filename="include/GameObserver.h" />
 		<Unit filename="include/GameSubject.h" />
@@ -74,8 +75,8 @@
 		<Unit filename="include/TestAchievementSystem.h" />
 		<Unit filename="include/TestCommand.h" />
 		<Unit filename="include/TestEnemyFactory.h" />
-		<Unit filename="include/WindowsKeyboard.h" />
 		<Unit filename="include/TestEnemyMovement.h" />
+		<Unit filename="include/WindowsKeyboard.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
 		<Unit filename="src/AttackCommand.cpp" />
@@ -90,6 +91,7 @@
 		<Unit filename="src/EnemyWave.cpp" />
 		<Unit filename="src/EnemyWaveFactory.cpp" />
 		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/GameDemo.cpp" />
 		<Unit filename="src/GameEvent.cpp" />
 		<Unit filename="src/GameView.cpp" />
 		<Unit filename="src/LinuxKeyboard.cpp" />
@@ -103,8 +105,8 @@
 		<Unit filename="src/TestAchievementSystem.cpp" />
 		<Unit filename="src/TestCommand.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
-		<Unit filename="src/WindowsKeyboard.cpp" />
 		<Unit filename="src/TestEnemyMovement.cpp" />
+		<Unit filename="src/WindowsKeyboard.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
