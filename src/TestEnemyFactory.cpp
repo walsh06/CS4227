@@ -15,13 +15,6 @@ TEST(EnemyTest, BasicEnemyTest)
 
     delete enemy;
     std::cout << "Enemy Killed" << std::endl;
-<<<<<<< HEAD
-
-
-=======
-
-
->>>>>>> 7dbf7565166c330a51ae9eebd6a9f274bf2b1d69
 }
 
 /// Tests SpeedEnemy
