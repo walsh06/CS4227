@@ -20,7 +20,6 @@ class EnemyInterface
 
         virtual int getPosX() = 0;
         virtual int getPosY() = 0;
-        virtual void draw(GameView* view) = 0;
 
     protected:
     private:

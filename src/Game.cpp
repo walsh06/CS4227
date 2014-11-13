@@ -94,7 +94,7 @@ void Game::update()
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
-            enemy->draw(gameView);
+            gameView->draw("Enemy", enemy->getPosX(), enemy->getPosY());
         }
 
         enemyCount = enemies.size();

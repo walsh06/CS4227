@@ -17,7 +17,7 @@ TEST(EnemyMoveTest, TestMoveHorizontal)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
 
-    Enemy *enemy = EnemyFactory::createEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createEnemy(moveStrategy);
 
     //test initial position
     ASSERT_EQ(enemy->getPosX(), 10);
@@ -41,7 +41,7 @@ TEST(EnemyMoveTest, TestMoveVertical)
 {
     EnemyOrientation* moveStrategy = new EnemyVertical();
 
-    Enemy *enemy = EnemyFactory::createEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createEnemy(moveStrategy);
 
     //test initial position
     ASSERT_EQ(enemy->getPosX(), 10);
@@ -65,7 +65,7 @@ TEST(EnemyMoveTest, TestChangeMoveStrategy)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
 
-    Enemy *enemy = EnemyFactory::createEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createEnemy(moveStrategy);
 
     //test initial position
     ASSERT_EQ(enemy->getPosX(), 10);

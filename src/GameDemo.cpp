@@ -37,7 +37,7 @@ void GameDemo::runDemo()
             case('a'):
             case('A'):
             {
-                Enemy* e = EnemyFactory::createEnemy(new EnemyHorizontal);
+                EnemyInterface* e = EnemyFactory::createEnemy(new EnemyHorizontal);
                 game->addEnemy(e);
             }
             break;

@@ -7,7 +7,7 @@
 TEST(EnemyTest, BasicEnemyTest)
 {
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
-    Enemy *enemy = EnemyFactory::createEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -29,7 +29,7 @@ TEST(EnemyTest, SpeedEnemyTest)
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
     int newSpeed= 3;
 
-    Enemy *enemy = EnemyFactory::createSpeedEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createSpeedEnemy(moveStrategy);
 
     std::cout << "Enemy Created" << std::endl;
 
@@ -54,7 +54,7 @@ TEST(EnemyTest, AttackEnemyTest)
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
     int newAttack = 3;
 
-    Enemy *enemy = EnemyFactory::createAttackEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createAttackEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -77,7 +77,7 @@ TEST(EnemyTest, DefenseEnemyTest)
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
     int newDefense = 3;
 
-    Enemy *enemy = EnemyFactory::createDefenseEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -100,7 +100,7 @@ TEST(EnemyTest, AttackDefenseEnemyTest)
     int newDefense = 3;
     int newAttack = 3;
 
-    Enemy *enemy = EnemyFactory::createAttackDefenseEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createAttackDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -123,7 +123,7 @@ TEST(EnemyTest, SpeedDefenseEnemyTest)
     int newDefense = 3;
     int newSpeed= 3;
 
-    Enemy *enemy = EnemyFactory::createSpeedDefenseEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createSpeedDefenseEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -146,7 +146,7 @@ TEST(EnemyTest, SpeedAttackEnemyTest)
     int newAttack = 3;
     int newSpeed= 3;
 
-    Enemy *enemy = EnemyFactory::createAttackSpeedEnemy(moveStrategy);
+    EnemyInterface *enemy = EnemyFactory::createAttackSpeedEnemy(moveStrategy);
     std::cout << "Enemy Created" << std::endl;
 
     ASSERT_EQ(enemy->getHealth(), 10);
@@ -168,7 +168,7 @@ TEST(EnemyTest, EnemyWithHealthTest)
 
     EnemyOrientation* moveStrategy = new EnemyHorizontal();
     int newHealth = 15;
-    Enemy *enemy = EnemyFactory::createEnemyWithHealth(moveStrategy, newHealth);
+    EnemyInterface *enemy = EnemyFactory::createEnemyWithHealth(moveStrategy, newHealth);
 
     std::cout << "Enemy Created" << std::endl;
 

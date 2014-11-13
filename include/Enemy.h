@@ -25,8 +25,6 @@ class Enemy : public EnemyInterface
         int getPosX();
         int getPosY();
 
-        void draw(GameView* view);
-
     protected:
 
         int attack;
