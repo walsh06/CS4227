@@ -75,6 +75,7 @@
 		<Unit filename="include/TestCommand.h" />
 		<Unit filename="include/TestEnemyFactory.h" />
 		<Unit filename="include/WindowsKeyboard.h" />
+		<Unit filename="include/TestEnemyMovement.h" />
 		<Unit filename="src/Achievement.cpp" />
 		<Unit filename="src/AchievementSystem.cpp" />
 		<Unit filename="src/AttackCommand.cpp" />
@@ -103,6 +104,7 @@
 		<Unit filename="src/TestCommand.cpp" />
 		<Unit filename="src/TestEnemyFactory.cpp" />
 		<Unit filename="src/WindowsKeyboard.cpp" />
+		<Unit filename="src/TestEnemyMovement.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
