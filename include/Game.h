@@ -2,19 +2,29 @@
 #define GAME_H
 
 #include <vector>
+#include "AchievementSystem.h"
+#include "SoundSystem.h"
 #include "EnemyInterface.h"
 #include "EnemyWave.h"
 #include "EnemyFactory.h"
 #include "Player.h"
+#include "GameView.h"
+#include "DeviceButton.h"
+#include "MoveUpCommand.h"
+#include "MoveDownCommand.h"
+#include "MoveLeftCommand.h"
+#include "MoveRightCommand.h"
+#include "AttackCommand.h"
 #include <unistd.h>
+#include <time.h>
 #include <iostream>
+
 
 using namespace std;
 
 class Game  : public GameSubject
 {
     public:
-
         static const int TYPE_KILLS = 1, TYPE_POINTS = 2, TYPE_MONEY = 3;
 
         /** Default constructor */
@@ -30,6 +40,17 @@ class Game  : public GameSubject
 
     protected:
     private:
+        GameView* gameView;
+        DeviceButton* deviceAt;
+        DeviceButton* deviceL;
+        DeviceButton* deviceR;
+        DeviceButton* deviceU;
+        DeviceButton* deviceD;
+        MoveUpCommand* moveUp;
+        MoveDownCommand* moveDown;
+        MoveLeftCommand* moveLeft;
+        MoveRightCommand* moveRight;
+        AttackCommand* attack;
         void moneyDrop(int times);
         std::vector<GameObserver *> observers;
         int numOfObservers;
