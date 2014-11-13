@@ -6,7 +6,6 @@
 #include "EnemyHorizontal.h"
 #include "EnemyVertical.h"
 #include "GameView.h"
-#include <iostream>
 
 class Enemy : public EnemyInterface
 {

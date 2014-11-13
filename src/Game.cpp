@@ -43,8 +43,7 @@ void Game::update()
     deviceL = new DeviceButton(moveLeft);
     deviceD = new DeviceButton(moveDown);
     deviceR = new DeviceButton(moveRight);
-    //DeviceButton* device = new DeviceButton();
-    //GameController* gc = new GameController(gw,p);
+
     int timer = 0;
     while(running)
     {
@@ -70,6 +69,8 @@ void Game::update()
             std::cout<<"Exiting game"<<std::endl;
             running = false;
         }
+
+
         type = NONE;
         gameView->draw(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
@@ -78,7 +79,7 @@ void Game::update()
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
-            //enemy->draw(gameView);
+            enemy->draw(gameView);
         }
 
         enemyCount = enemies.size();
