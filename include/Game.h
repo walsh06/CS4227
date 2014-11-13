@@ -16,6 +16,7 @@
 #include "MoveRightCommand.h"
 #include "AttackCommand.h"
 #include <unistd.h>
+#include <time.h>
 #include <iostream>
 
 
@@ -24,11 +25,8 @@ using namespace std;
 class Game  : public GameSubject
 {
     public:
-
         static const int TYPE_KILLS = 1, TYPE_POINTS = 2, TYPE_MONEY = 3;
 
-        vector<EnemyInterface *> enemies;
-        Player* player;
         /** Default constructor */
         Game();
         /** Default destructor */
@@ -58,6 +56,8 @@ class Game  : public GameSubject
         int numOfObservers;
         int enemyCount;
         int percentage;
+        vector<EnemyInterface *> enemies;
+        Player* player;
 
         void notify(int type, int value);
 };

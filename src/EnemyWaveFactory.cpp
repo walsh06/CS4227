@@ -1,3 +1,5 @@
+///Removed
+/*
 #include "EnemyWaveFactory.h"
 
 
@@ -49,3 +51,4 @@ EnemyInterface* EnemyWaveFactory::createSpeedWave(EnemyOrientation* moveStrategy
     }
     return wave;
 }
+*/
