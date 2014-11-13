@@ -123,16 +123,11 @@ void Game::update()
             moneyDrop(difference);
         }
 
-<<<<<<< HEAD
-        usleep(30000);
-=======
         this->player->update();
         //commands will be processed by client on thread
         //depending on desired input device.
 
-
         usleep(300000);
->>>>>>> master
 
         timer += 1 ;
     }
