@@ -15,7 +15,6 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
-
     addObserver(new AchievementSystem());
     addObserver(new SoundSystem());
 
@@ -77,7 +76,7 @@ void Game::update()
 
 
         type = NONE;
-        gameView->draw(player->getXPosition(),player->getYPosition());
+        gameView->draw("Player", player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
         this->player->update();
         int oldEnemyCount = enemyCount;
@@ -89,7 +88,7 @@ void Game::update()
 
         enemyCount = enemies.size();
 
-        if (enemyCount < 1)
+        if (enemyCount < 1 && oldEnemyCount > 0 )
         {
             notify(TYPE_POINTS, 10000 - timer);
         }
@@ -106,7 +105,7 @@ void Game::update()
         //depending on desired input device.
 
 
-        usleep(30000);
+        usleep(300000);
 
         timer += 1 ;
     }
@@ -122,6 +121,14 @@ void Game::moneyDrop(int times)
 void Game::addEnemy(EnemyInterface* enemy)
 {
     enemies.push_back(enemy);
+}
+
+void Game::clearEnemies()
+{
+    for (auto &enemy : enemies) // access by reference to avoid copying
+    {
+        enemies.pop_back();
+    }
 }
 
 void Game::addObserver(GameObserver* o)

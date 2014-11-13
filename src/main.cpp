@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "GameView.h"
 #include "DeviceButton.h"
-#include "Game.h"
+#include "GameDemo.h"
 #include <iostream>
 #include <string>
 
@@ -21,8 +21,8 @@ int main(int argc, char** argv)
 
     if(choice  == 1)
     {
-        //Game* game = new Game();
-        //game->update();
+        GameDemo demo;
+        demo.runDemo();
     }
     else if(choice == 2)
     {
