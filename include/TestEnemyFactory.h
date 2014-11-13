@@ -9,12 +9,11 @@
 class TestEnemyFactory : public EnemyFactory
 {
     public:
-        /** Default constructor */
         TestEnemyFactory();
-        /** Default destructor */
         virtual ~TestEnemyFactory();
     protected:
     private:
 };
 
 #endif // TESTENEMYFACTORY_H
+
