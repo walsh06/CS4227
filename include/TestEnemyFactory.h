@@ -3,6 +3,7 @@
 
 #include "EnemyFactory.h"
 #include <gtest/gtest.h>
+#include <iostream>
 
 
 class TestEnemyFactory : public EnemyFactory

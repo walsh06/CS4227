@@ -22,7 +22,6 @@ class Enemy : public EnemyInterface
         virtual void setHealth(int health)  ;
         void setStrategy(EnemyOrientation* moveStrategy);
         void update();
-
         int getPosX();
         int getPosY();
 
