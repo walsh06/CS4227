@@ -63,9 +63,11 @@ int GameView::checkButtonState()
 }
 
 /**
- Draws the coordinates to the screen.
+ Draws the object to the screen
+ at the new x and y.
 */
 void GameView::draw(string name, int x, int y)
+
 {
         cout << name << " | (x, y) : (" << x << ", " << y << ")" << endl;
 }
