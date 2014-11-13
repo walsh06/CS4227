@@ -35,7 +35,7 @@ void Enemy::update()
 
 void Enemy::draw(GameView* view)
 {
-    view->draw(posX, posY);
+    view->draw("Enemy", posX, posY);
 }
 
 /// Returns the enemy's health.

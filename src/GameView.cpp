@@ -61,11 +61,9 @@ int GameView::checkButtonState()
  Draws the object to the screen
  at the new x and y.
 */
-void GameView::draw(int x, int y)
+void GameView::draw(string name, int x, int y)
+
 {
-        cout<<"X = ";
-        cout<<x<<endl;
-        cout<<"Y = ";
-        cout<<y<<endl;
+        cout << name << " | (x, y) : (" << x << ", " << y << ")" << endl;
 }
 

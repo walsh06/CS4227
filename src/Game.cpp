@@ -21,6 +21,7 @@ Game::Game()
     this->percentage = 0;
     this->player = new Player();
     this->enemyCount = enemies.size();
+    srand(time(NULL));
 
     addObserver(new AchievementSystem());
     addObserver(new SoundSystem());
@@ -94,8 +95,9 @@ void Game::update()
 
         //Set type to none as no button was pressed.
         type = NONE;
-        // draws the player to the new x and y positions.
-        gameView->draw(player->getXPosition(),player->getYPosition());
+
+        gameView->draw("Player", player->getXPosition(),player->getYPosition());
+        //Waiting for player update, being done by Killian?
         this->player->update();
         //commands will be processed by client on thread
         //depending on desired input device.
@@ -109,19 +111,28 @@ void Game::update()
 
         enemyCount = enemies.size();
 
-        if (enemyCount < 1)
+        if (enemyCount < 1 && oldEnemyCount > 0 )
         {
-            notify(TYPE_POINTS, 10000 - timer);
+            notify(GameEvent::TYPE_POINTS, 10000 - timer);
         }
 
         if(enemyCount < oldEnemyCount)
         {
             int difference = oldEnemyCount - enemyCount;
-            notify(TYPE_KILLS,(difference));
+            notify(GameEvent::TYPE_KILLS,(difference));
             moneyDrop(difference);
         }
 
+<<<<<<< HEAD
         usleep(30000);
+=======
+        this->player->update();
+        //commands will be processed by client on thread
+        //depending on desired input device.
+
+
+        usleep(300000);
+>>>>>>> master
 
         timer += 1 ;
     }
@@ -131,12 +142,20 @@ void Game::moneyDrop(int times)
 {
     for(int i = 0 ; i < times ; i++)
         if(rand() % 100 < percentage)
-            notify(TYPE_MONEY, 10);
+            notify(GameEvent::TYPE_MONEY, 10);
 }
 
 void Game::addEnemy(EnemyInterface* enemy)
 {
     enemies.push_back(enemy);
+}
+
+void Game::clearEnemies()
+{
+    for (auto &enemy : enemies) // access by reference to avoid copying
+    {
+        enemies.pop_back();
+    }
 }
 
 void Game::addObserver(GameObserver* o)
@@ -158,6 +177,7 @@ void Game::removeObserver(GameObserver* o)
 
 void Game::notify(int type, int value)
 {
+    #pragma omp parallel for
     for(int i = 0; i < numOfObservers; i++)
     {
         GameEvent event(type, value);

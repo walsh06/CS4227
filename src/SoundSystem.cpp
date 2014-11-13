@@ -2,7 +2,7 @@
 
 SoundSystem::SoundSystem()
 {
-    sounds = {"Enemy Killed", "Point Scored", "Money Gained"};
+    sounds = {"Enemy Killed", "Money Gained", "Point Scored"};
 }
 
 SoundSystem::~SoundSystem()

@@ -1,18 +1,19 @@
 #include "MoveUpCommand.h"
 #include "Player.h"
 
-//Concrete Command to move upwards takes a player movement Reciever.
+/**
+ This is the Concrete Command for moving upwards.
+ Constructor: takes a player pointer.
+*/
 MoveUpCommand::MoveUpCommand(Player* player)
 {
     this->player = player;
 }
 
-//Destructor
-MoveUpCommand::~MoveUpCommand()
-{
-}
-
-//Command allowing the player to move upwards.
+/**
+ Command allowing the player to move up.
+ Executes calls the players move up method.
+*/
 void MoveUpCommand::execute()
 {
     player->moveUp();

@@ -7,7 +7,6 @@
 class EnemyItemDecorator : public Enemy
 {
     public:
-        Enemy* tempEnemy;
 
         /** Default constructor */
         EnemyItemDecorator(Enemy* enemy);
@@ -22,6 +21,7 @@ class EnemyItemDecorator : public Enemy
         void setHealth(int health);
     protected:
     private:
+        Enemy* tempEnemy;
 };
 
 #endif // ENEMYITEM_H

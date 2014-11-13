@@ -6,12 +6,13 @@
 
 using namespace std;
 
-//Concrete Command Header.
+/**
+ Command to allow the player to move left.
+*/
 class MoveLeftCommand:public Command
 {
     public:
         MoveLeftCommand(Player* player);
-        virtual ~MoveLeftCommand();
         void execute();
     protected:
     private:
