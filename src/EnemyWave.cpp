@@ -28,6 +28,15 @@ void EnemyWave::update()
     }
 }
 
+
+void EnemyWave::draw(GameView* view)
+{
+    for (int i = 0; i < waveSize; i++ )
+    {
+        wave[i]->draw(view);
+    }
+}
+
 ///Add enemy to the list
 void EnemyWave::addEnemy(EnemyInterface* enemy)
 {

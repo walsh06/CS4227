@@ -1,5 +1,7 @@
 #include "Player.h"
+#include <iostream>
 
+//Model of the MVC
 Player::Player()
 {
     killCount = 0;
@@ -61,6 +63,11 @@ void Player::setXPosition(int x)
 void Player::setYPosition(int y)
 {
     this->yPos = y;
+}
+
+void Player::attack()
+{
+    std::cout<<"Attacking enemy"<<std::endl;
 }
 
 //Allows the player to move left.

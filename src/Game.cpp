@@ -1,5 +1,13 @@
 #include "Game.h"
+#include <cstdlib>
 
+#define ATTACK 1
+#define LEFT 2
+#define RIGHT 3
+#define UP 4
+#define DOWN 5
+#define QUIT 6
+#define NONE 0
 
 Game::Game()
 {
@@ -10,24 +18,73 @@ Game::Game()
 
     addObserver(new AchievementSystem());
     addObserver(new SoundSystem());
+
+    this->moveUp = new MoveUpCommand(player);
+    this->moveDown = new MoveDownCommand(player);
+    this->moveLeft = new MoveLeftCommand(player);
+    this->moveRight = new MoveRightCommand(player);
+    this->attack = new AttackCommand(player);
+
 }
 
 Game::~Game()
 {
     delete player;
+    delete gameView;
+    delete moveDown;
+    delete moveUp;
+    delete moveRight;
+    delete moveLeft;
+    delete attack;
 }
 
 void Game::update()
 {
+    bool running = true;
+    this->gameView = new GameView();
+    int type;
+    deviceAt = new DeviceButton(attack);
+    deviceU = new DeviceButton(moveUp);
+    deviceL = new DeviceButton(moveLeft);
+    deviceD = new DeviceButton(moveDown);
+    deviceR = new DeviceButton(moveRight);
+
     int timer = 0;
-    while(true)
+    while(running)
     {
+        type = gameView->checkButtonState();
+
+        if(type == ATTACK){
+            deviceAt->press();
+        }
+        if(type == UP){
+            deviceU->press();
+        }
+        if(type == DOWN){
+            deviceD->press();
+        }
+        if(type == LEFT){
+            deviceL->press();
+        }
+        if(type == RIGHT){
+            deviceR->press();
+        }
+        if(type == QUIT)
+        {
+            std::cout<<"Exiting game"<<std::endl;
+            running = false;
+        }
+
+
+        type = NONE;
+        gameView->draw(player->getXPosition(),player->getYPosition());
         //Waiting for player update, being done by Killian?
-        //this->player->update();
+        this->player->update();
         int oldEnemyCount = enemyCount;
         for (auto &enemy : enemies) // access by reference to avoid copying
         {
             enemy->update();
+            enemy->draw(gameView);
         }
 
         enemyCount = enemies.size();

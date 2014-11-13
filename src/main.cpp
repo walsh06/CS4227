@@ -1,11 +1,17 @@
 #include <gtest/gtest.h>
+#include <iostream>
+#include "Player.h"
+#include "GameView.h"
+#include "DeviceButton.h"
 #include "Game.h"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main(int argc, char** argv)
 {
+
     int choice;
     string testName;
     cout << "1) Run Demo" << endl;
@@ -30,6 +36,5 @@ int main(int argc, char** argv)
         ::testing::GTEST_FLAG(filter) = testName;
         testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();
-
     }
 }

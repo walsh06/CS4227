@@ -7,10 +7,11 @@ class DeviceButton
     public:
         DeviceButton(Command* command);
         virtual ~DeviceButton();
-        Command* aCommand;
+        void setCommand(Command* c);
         void press();
     protected:
     private:
+        Command* aCommand;
 };
 
 #endif // DEVICEBUTTON_H
