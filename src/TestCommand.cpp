@@ -26,21 +26,26 @@ TEST(CommandTest, TestMoveKeys)
     DeviceButton downPressed(moveDown);
 
     //test initial state of the player
+    std::cout << "Check Initial Position" << std::endl;
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
 
+    std::cout << "Move Right" << std::endl;
     rightPressed.press();
     ASSERT_EQ(testPlayer->getXPosition(), 1);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
 
+    std::cout << "Move Left" << std::endl;
     leftPressed.press();
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
 
+    std::cout << "Move Up" << std::endl;
     upPressed.press();
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 1);
 
+    std::cout << "Move Down" << std::endl;
     downPressed.press();
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
@@ -66,9 +71,11 @@ TEST(CommandTest, TestMoveSequence)
     DeviceButton downPressed(moveDown);
 
     //test initial state of the player
+    std::cout << "Check Initial Position" << std::endl;
     ASSERT_EQ(testPlayer->getXPosition(), 0);
     ASSERT_EQ(testPlayer->getYPosition(), 0);
 
+    std::cout << "Test Sequence: R-U-U-R-U" << std::endl;
     rightPressed.press();
     upPressed.press();
     upPressed.press();
@@ -77,6 +84,7 @@ TEST(CommandTest, TestMoveSequence)
     ASSERT_EQ(testPlayer->getXPosition(), 2);
     ASSERT_EQ(testPlayer->getYPosition(), 3);
 
+    std::cout << "Test Sequence: R-D-L-D-L" << std::endl;
     rightPressed.press();
     downPressed.press();
     leftPressed.press();
