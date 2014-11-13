@@ -1,3 +1,5 @@
+///Removed
+/*
 #include "EnemyWave.h"
 
 EnemyWave::EnemyWave(int waveSize)
@@ -63,3 +65,4 @@ EnemyInterface* EnemyWave::getEnemy(int enemyIndex)
 {
     return wave[enemyIndex];
 }
+*/
