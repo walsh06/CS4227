@@ -12,7 +12,6 @@ class SoundSystem : public GameObserver
 {
     public:
         SoundSystem();
-        virtual ~SoundSystem();
 
         void update(GameEvent event);
     protected:

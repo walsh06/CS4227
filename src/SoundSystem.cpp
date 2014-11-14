@@ -9,14 +9,6 @@ SoundSystem::SoundSystem()
 }
 
 /**
- Destructor
-*/
-SoundSystem::~SoundSystem()
-{
-    delete sounds;
-}
-
-/**
  Plays a sound to match the game event
  passed as a parameter.
 */
